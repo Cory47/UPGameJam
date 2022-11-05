@@ -30,15 +30,19 @@ func _ready() -> void:
 	
 func fire():
 	if Input.is_action_pressed("ui_shoot") and ammo > 0:
+		#runs once per fire animation
 		if not anim_player.is_playing():
 			ammo -= 1
 			print(ammo, " ammo left")
 			
+			#increases the players speed every 20 shots
 			if change_speed > 19:
 				emit_signal("change_speed")
 				change_speed = 0
 			else:
 				change_speed += 1
+				
+			#gets the object colliding and decreases health if enemy
 			if $Camera/RayCast.is_colliding():
 				var target = raycast.get_collider()
 				if target.is_in_group("Enemy"):
@@ -57,12 +61,6 @@ func _input(event: InputEvent) -> void:
 		camera_rotation()
 		
 	#if InputEventMouseButton and event.is_pressed() and Input.is_action_just_pressed("ui_shoot"):
-		
-
-
-#		var bullet = bullet_scene.instance()
-#		add_child(bullet)
-#		print("shoot")
 		
 
 
