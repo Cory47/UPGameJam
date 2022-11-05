@@ -8,13 +8,15 @@
 [node name="EnemyTest" instance=ExtResource( 1 )]
 
 [node name="Enemy" parent="." index="3" groups=["Enemy"] instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.80757, 3.47768, 7.91174 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.770898, 3.7443, -12.496 )
+BulletScene = null
 
 [node name="Boss" parent="." index="4" groups=["Enemy"] instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.27024, 3.1444, 8.35068 )
 
 [node name="Enemy2" parent="." index="5" groups=["Enemy"] instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.56089, 3.18213, 7.92223 )
+BulletScene = null
 
 [node name="Ammo" parent="." index="6" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.41862, 0.250005, 0.418875 )

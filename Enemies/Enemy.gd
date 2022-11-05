@@ -65,4 +65,4 @@ func _on_ShotTimer_timeout():
 	var dest = get_player_pos()
 	print(dest)
 	bullet.setDest(dest)
-	bullet.setExist(true)
+	#bullet.translation = move_toward()

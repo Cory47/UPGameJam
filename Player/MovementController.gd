@@ -112,3 +112,8 @@ func _on_Area_area_entered(area):
 func _on_Head_change_speed():
 	speed_mod = speed_mod * 1.33
 	pass # Replace with function body.
+
+
+func _on_Enemy2_karma():
+	$Head/Camera/HUD/ScoreLabel.text = str(1)
+	pass # Replace with function body.
