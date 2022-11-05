@@ -7,6 +7,6 @@ func _ready():
 
 func _on_Button_pressed():
 
-	emit_signal("start_game")
-	get_tree().change_scene("res://Levels/Lilian/L_Main(copy 1).tscn")
+	#emit_signal("start_game")
+	get_tree().change_scene("res://Levels/Main/L_Main.tscn")
 
