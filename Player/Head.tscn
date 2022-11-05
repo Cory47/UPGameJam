@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Player/Head.gd" type="Script" id=1]
+[ext_resource path="res://Levels/Main/HUD.tscn" type="PackedScene" id=2]
 
 [sub_resource type="GDScript" id=5]
 script/source = "extends Spatial
@@ -110,6 +111,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.347, -0.274, -1.20877 )
 transform = Transform( 0.954652, 0, 0.297725, 0.0741821, 0.968462, -0.237864, -0.288335, 0.249163, 0.924543, 0.347, -0.18, 1 )
 mesh = SubResource( 7 )
 material = SubResource( 8 )
+
+[node name="HUD" parent="Camera" instance=ExtResource( 2 )]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 reset_on_save = false
