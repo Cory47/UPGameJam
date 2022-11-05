@@ -17,4 +17,4 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.27024, 0.250003, 8.35068 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.56089, 0.250003, 7.92223 )
 
 [node name="Ammo" parent="." index="6" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.41862, 0.250005, 0.418875 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.41862, 1.32213, 0.418875 )
