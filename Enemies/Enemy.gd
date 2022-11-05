@@ -65,8 +65,11 @@ func _on_AggroRange_body_exited(body):
 
 func _on_ShotTimer_timeout():
 	var bullet = BulletScene.instance()
-	add_child(bullet)
-	var dest = get_player_pos()
-	print(dest)
-	bullet.setDest(dest)
+	owner.add_child(bullet)
+	#var dest = get_player_pos()
+	#print(dest)
+	#bullet.setDest(dest)
+	bullet.transform = $ShotPosition.global_transform
+	bullet.velocity = -bullet.transform.basis.z * bullet.muzzle_velocity
+	bullet.scale = Vector3(0.25, 0.25, 0.25)
 	#bullet.translation = move_toward()
