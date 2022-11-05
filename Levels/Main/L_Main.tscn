@@ -6,9 +6,9 @@
 [ext_resource path="res://Levels/Main/L_Main.gd" type="Script" id=4]
 [ext_resource path="res://Levels/Main/Geometry/Wall.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Levels/Main/Geometry/Cube.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Ammo.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Enemy.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Boss.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Player/Ammo.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Enemies/Enemy.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Enemies/Boss.tscn" type="PackedScene" id=9]
 
 [node name="L_Main" type="Spatial"]
 script = ExtResource( 4 )
