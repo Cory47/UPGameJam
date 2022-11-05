@@ -15,11 +15,17 @@ func _process(delta):
 	look_at(player_pos, Vector3.UP)
 	
 	#standy/aggro behavior
-	#if(aggro == false):
-		#nothing special right now
-	#else:
-		#move towards player_pos
+	if(aggro == false):
+		idle_behavior()
+	else:
+		aggro_behavior()
+
+#placeholders for base class right now
+func idle_behavior():
+	pass
 	
+func aggro_behavior():
+	pass
 	
 #gets adjusted player position to rotate enemy sprite, ignores up/down rotation
 func get_player_pos():
@@ -29,9 +35,11 @@ func get_player_pos():
 	return adjusted_pos
 
 #determines enemy behavior when player is nearby
-func _on_AggroRange_area_entered(area):
-	#if area is player collision area, then enter attack mode
-	pass
-func _on_AggroRange_area_exited(area):
-	#if area exiting is player's, then go back to standby
-	pass # Replace with function body.
+func _on_AggroRange_body_entered(body):
+	if(body.is_in_group("Player")):
+		aggro = true
+		print("player entered aggro range")
+func _on_AggroRange_body_exited(body):
+	if(body.is_in_group("Player")):
+		aggro = false
+		print("player exited aggro range")
