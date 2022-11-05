@@ -18,6 +18,13 @@ onready var floor_max_angle: float = deg2rad(45.0)
 # Get the gravity from the project settings to be synced with RigidDynamicBody nodes.
 onready var gravity = (ProjectSettings.get_setting("physics/3d/default_gravity") 
 		* gravity_multiplier)
+		
+		
+#gamejam variables
+var karma = 0
+var speed_mod = 1
+
+
 
 
 # Called every physics tick. 'delta' is constant
@@ -50,6 +57,10 @@ func _physics_process(delta) -> void:
 	
 	velocity = move_and_slide_with_snap(velocity, snap, up_direction, 
 			stop_on_slope, 4, floor_max_angle)
+			
+			
+	
+				
 
 
 func direction_input() -> void:
@@ -73,7 +84,7 @@ func accelerate(delta: float) -> void:
 	temp_vel.y = 0
 	
 	var temp_accel: float
-	var target: Vector3 = direction * speed
+	var target: Vector3 = direction * speed * speed_mod
 	
 	if direction.dot(temp_vel) > 0:
 		temp_accel = acceleration
@@ -87,3 +98,17 @@ func accelerate(delta: float) -> void:
 	
 	velocity.x = temp_vel.x
 	velocity.z = temp_vel.z
+
+
+func _on_Area_area_entered(area):
+	speed_mod = speed_mod * .75
+	$Head.ammo += 20
+	print(speed_mod)
+	pass # Replace with function body.
+
+
+
+
+func _on_Head_change_speed():
+	speed_mod = speed_mod * 1.33
+	pass # Replace with function body.
