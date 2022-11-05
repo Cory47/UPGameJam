@@ -1,5 +1,6 @@
 extends Spatial
 
+signal shot_taken
 
 export(NodePath) var cam_path := NodePath("Camera")
 onready var cam: Camera = get_node(cam_path)
@@ -33,6 +34,7 @@ func fire():
 		#runs once per fire animation
 		if not anim_player.is_playing():
 			ammo -= 1
+			$Camera/HUD.update_ammo(ammo)
 			print(ammo, " ammo left")
 			
 			#increases the players speed every 20 shots
