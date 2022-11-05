@@ -114,6 +114,6 @@ func _on_Head_change_speed():
 	pass # Replace with function body.
 
 
-func _on_Enemy_karma():
+func _on_Enemy2_karma():
 	$Head/Camera/HUD/ScoreLabel.text = str(1)
 	pass # Replace with function body.

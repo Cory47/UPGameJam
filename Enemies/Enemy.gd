@@ -4,6 +4,9 @@ var health = 100
 var aggro = false
 
 signal karma
+signal shoot_bullet
+
+export (PackedScene) var BulletScene
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -58,3 +61,12 @@ func _on_AggroRange_body_exited(body):
 	if(body.is_in_group("Player")):
 		aggro = false
 		print("player exited aggro range")
+
+
+func _on_ShotTimer_timeout():
+	var bullet = BulletScene.instance()
+	add_child(bullet)
+	var dest = get_player_pos()
+	print(dest)
+	bullet.setDest(dest)
+	#bullet.translation = move_toward()
