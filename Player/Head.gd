@@ -34,7 +34,7 @@ func fire():
 		#runs once per fire animation
 		if not anim_player.is_playing():
 			ammo -= 1
-			$Camera/HUD.update_ammo(ammo)
+			$Camera/HUD.update_ammo(-1)
 			print(ammo, " ammo left")
 			
 			#increases the players speed every 20 shots
