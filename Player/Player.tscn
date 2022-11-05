@@ -23,5 +23,6 @@ script = ExtResource( 4 )
 shape = SubResource( 1 )
 
 [connection signal="input_event" from="." to="." method="_on_Player_input_event"]
+[connection signal="change_ammo" from="Head" to="." method="_on_Head_change_ammo"]
 [connection signal="change_speed" from="Head" to="." method="_on_Head_change_speed"]
 [connection signal="area_entered" from="AmmoCollision" to="." method="_on_Area_area_entered"]

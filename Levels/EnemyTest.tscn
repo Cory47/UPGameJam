@@ -10,6 +10,9 @@
 [node name="Enemy" parent="." index="3" groups=["Enemy"] instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.80757, 0.250002, 7.91174 )
 
+[node name="Enemy" parent="Enemy" index="3" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.45282, 3.8147e-06, -5.1258 )
+
 [node name="Boss" parent="." index="4" groups=["Enemy"] instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.27024, 0.250003, 8.35068 )
 

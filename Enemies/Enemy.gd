@@ -3,7 +3,7 @@ extends StaticBody
 var health = 100
 var aggro = false
 
-signal karma
+signal died
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -35,7 +35,7 @@ func aggro_behavior():
 	pass
 	
 func die():
-	emit_signal("karma")
+	emit_signal("died")
 	queue_free()
 	
 #gets adjusted player position to rotate enemy sprite, ignores up/down rotation

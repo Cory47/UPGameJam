@@ -24,6 +24,8 @@ onready var gravity = (ProjectSettings.get_setting("physics/3d/default_gravity")
 var karma = 0
 var speed_mod = 1
 
+signal change_ammo
+
 
 
 
@@ -103,6 +105,8 @@ func accelerate(delta: float) -> void:
 func _on_Area_area_entered(area):
 	speed_mod = speed_mod * .75
 	$Head.ammo += 20
+	
+	emit_signal("change_ammo", $Head.ammo)
 	print(speed_mod)
 	pass # Replace with function body.
 
@@ -111,4 +115,9 @@ func _on_Area_area_entered(area):
 
 func _on_Head_change_speed():
 	speed_mod = speed_mod * 1.33
+	pass # Replace with function body.
+
+
+func _on_Head_change_ammo(ammo):
+	emit_signal("change_ammo", ammo)
 	pass # Replace with function body.

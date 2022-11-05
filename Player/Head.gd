@@ -18,6 +18,8 @@ var damage = 10
 var ammo = 20
 var change_speed = 0
 signal change_speed
+signal change_ammo
+
 onready var anim_player = $AnimationPlayer
 onready var raycast = $Camera/RayCast
 
@@ -33,6 +35,7 @@ func fire():
 		#runs once per fire animation
 		if not anim_player.is_playing():
 			ammo -= 1
+			emit_signal("change_ammo", ammo)
 			print(ammo, " ammo left")
 			
 			#increases the players speed every 20 shots

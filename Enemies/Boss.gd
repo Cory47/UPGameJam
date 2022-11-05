@@ -59,13 +59,7 @@ func _on_AggroRange_body_exited(body):
 		print("player exited aggro range")
 
 
-func _on_Enemy_karma():
-	print("add health")
-	health += karma * 100
-	scale.x = scale.x * 1.2
-	scale.y = scale.y * 1.2
-	scale.z = scale.z * 1.2
-	pass # Replace with function body.
+
 
 
 func _on_Enemy2_karma():
@@ -74,4 +68,15 @@ func _on_Enemy2_karma():
 	scale.x = scale.x * 1.2
 	scale.y = scale.y * 1.2
 	scale.z = scale.z * 1.2
+	pass # Replace with function body.
+
+
+
+func _on_Enemy_died():
+	print("add health")
+	health += karma * 100
+	scale.x = scale.x * 1.2
+	scale.y = scale.y * 1.2
+	scale.z = scale.z * 1.2
+	emit_signal("karma", karma)
 	pass # Replace with function body.
