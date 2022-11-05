@@ -7,6 +7,10 @@
 [ext_resource path="res://Levels/Main/Geometry/Wall.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Levels/Main/Geometry/Cube.tscn" type="PackedScene" id=6]
 
+
+[ext_resource path="res://Levels/Main/HUD.tscn" type="PackedScene" id=7]
+
+
 [node name="L_Main" type="Spatial"]
 script = ExtResource( 4 )
 
@@ -105,3 +109,9 @@ transform = Transform( -0.866026, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75,
 shadow_enabled = true
 shadow_bias = 0.05
 directional_shadow_max_distance = 250.0
+
+
+[node name="HUD" parent="." instance=ExtResource( 7 )]
+
+
+
