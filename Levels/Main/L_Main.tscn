@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Levels/Main/Geometry/Floor.tscn" type="PackedScene" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://Levels/Main/Geometry/Wall.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Levels/Main/Geometry/Cube.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Ammo.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Enemy.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Boss.tscn" type="PackedScene" id=9]
 
 [node name="L_Main" type="Spatial"]
 script = ExtResource( 4 )
@@ -109,3 +111,15 @@ directional_shadow_max_distance = 250.0
 
 [node name="Ammo" parent="." instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.83228, 9.92678 )
+
+[node name="Enemy" parent="." groups=["Enemy"] instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.21321, 0.250005, 2.68678 )
+
+[node name="Enemy2" parent="." groups=["Enemy"] instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.74863, 0.250002, 5.15282 )
+
+[node name="Boss" parent="." groups=["Enemy"] instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8 )
+
+[connection signal="karma" from="Enemy" to="Boss" method="_on_Enemy_karma"]
+[connection signal="karma" from="Enemy2" to="Boss" method="_on_Enemy2_karma"]
