@@ -65,12 +65,10 @@ func _on_AggroRange_body_exited(body):
 		print("player exited aggro range")
 
 
-func _on_ShotTimer_timeout():
-	var bullet = BulletScene.instance()
-	add_child(bullet)
-	bullet.translate()
-	
+#func _on_ShotTimer_timeout():
+#	var bullet = BulletScene.instance()
+#	add_child(bullet)
 #	var dest = get_player_pos()
 #	print(dest)
 #	bullet.setDest(dest)
-	#bullet.translation = move_toward()
+#	#bullet.translation = move_toward()

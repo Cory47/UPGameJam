@@ -1,6 +1,7 @@
 extends Spatial
 
 signal shot_taken
+signal removeWall
 
 export(NodePath) var cam_path := NodePath("Camera")
 onready var cam: Camera = get_node(cam_path)
@@ -78,7 +79,13 @@ func camera_rotation() -> void:
 	
 func _physics_process(delta):
 	fire()	
-	
+	if Input.is_action_just_pressed("ui_shoot"):
+		if $Camera/RayCast.get_collider() and $Camera/RayCast.get_collider().get_class() == "StaticBody" and $Camera/RayCast.get_collider().get_name() == "WallStaticBody":
+				held_object =  $Camera/RayCast.get_collider()
+				held_object.collision_mask = 0
+				held_object.free()
+				emit_signal("removeWall")
+				print(held_object)
 	pass
 			
 			
