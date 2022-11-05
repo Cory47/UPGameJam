@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Levels/Main/Level3.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Levels/Main/Geometry/Material_001.material" type="Material" id=3]
+[ext_resource path="res://Enemies/Enemy.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Levels/Main/Environment.tres" type="Environment" id=5]
 [ext_resource path="res://Levels/Main/L_Main.gd" type="Script" id=6]
 
@@ -85,3 +86,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 72.8058, 0.612441, 12.2065 )
 shadow_enabled = true
 omni_range = 12.493
 omni_attenuation = 1.62451
+
+[node name="Enemy" parent="Lighting" groups=["Enemy"] instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 48.6414, 0, 0 )
+
+[connection signal="karma" from="Lighting/Enemy" to="Player" method="_on_Enemy_karma"]
