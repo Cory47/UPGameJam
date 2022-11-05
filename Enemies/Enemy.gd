@@ -11,6 +11,8 @@ export (PackedScene) var BulletScene
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$Sprite.play("default")
+	var player = get_node("Player")
+	#player.connect("karma", self, "_on_Enemy2_karma")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -62,7 +64,6 @@ func _on_AggroRange_body_exited(body):
 		aggro = false
 		print("player exited aggro range")
 
-
 func _on_ShotTimer_timeout():
 	var bullet = BulletScene.instance()
 	owner.add_child(bullet)
@@ -73,3 +74,4 @@ func _on_ShotTimer_timeout():
 	bullet.velocity = -bullet.transform.basis.z * bullet.muzzle_velocity
 	bullet.scale = Vector3(0.25, 0.25, 0.25)
 	#bullet.translation = move_toward()
+

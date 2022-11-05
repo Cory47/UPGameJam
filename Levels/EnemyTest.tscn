@@ -18,3 +18,5 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.56089, 3.18213, 7.92223 )
 
 [node name="Ammo" parent="." index="6" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.41862, 1.32213, 0.418875 )
+
+[connection signal="karma" from="Enemy" to="Player" method="_on_Enemy_karma"]
