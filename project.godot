@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="First Person Starter"
-run/main_scene="res://Levels/Main/L_Main.tscn"
+run/main_scene="res://Levels/Main/Start.tscn"
 config/icon="res://icon.png"
 
 [gui]
