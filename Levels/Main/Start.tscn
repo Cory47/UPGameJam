@@ -1,11 +1,11 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Button.gd" type="Script" id=1]
-[ext_resource path="res://fonts/Cookiemonster-gv11.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://fonts/Cookiemonster-gv11.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Button.gd" type="Script" id=2]
 
 [sub_resource type="DynamicFont" id=1]
 size = 100
-font_data = ExtResource( 2 )
+font_data = ExtResource( 1 )
 
 [sub_resource type="Theme" id=2]
 default_font = SubResource( 1 )
@@ -34,6 +34,6 @@ custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_hover = Color( 0.313726, 0.901961, 1, 1 )
 text = "Doomies"
 flat = true
-script = ExtResource( 1 )
+script = ExtResource( 2 )
 
 [connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
