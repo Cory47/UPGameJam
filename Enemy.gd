@@ -5,7 +5,7 @@ var aggro = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	$AnimatedSprite3D.play("default")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -29,7 +29,13 @@ func aggro_behavior():
 	
 #gets adjusted player position to rotate enemy sprite, ignores up/down rotation
 func get_player_pos():
-	var player_pos = $".".get_parent().get_node_or_null("Player").global_transform.origin
+	var player = $".".get_parent().get_node_or_null("Player")
+	var player_pos
+	
+	if(player == null):
+		player_pos = Vector3.ZERO
+	else:
+		player_pos = player.global_transform.origin
 	var adjusted_pos = Vector3(player_pos.x, $".".global_transform.origin.y, player_pos.z)
 	
 	return adjusted_pos

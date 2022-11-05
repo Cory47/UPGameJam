@@ -6,4 +6,4 @@
 [node name="EnemyTest" instance=ExtResource( 1 )]
 
 [node name="Enemy" parent="." index="3" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.01273, 3.19239, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.01273, 1.71298, 0 )

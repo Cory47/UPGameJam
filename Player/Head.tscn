@@ -1,7 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Player/Head.gd" type="Script" id=1]
 [ext_resource path="res://Bullet.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Art/gun1.png" type="Texture" id=3]
+[ext_resource path="res://Art/gun2.png" type="Texture" id=4]
 
 [sub_resource type="CubeMesh" id=1]
 size = Vector3( 0.1, 0.2, 1.5 )
@@ -39,6 +41,19 @@ tracks/0/keys = {
 "values": [ Vector3( 0.347, -0.18, 1 ), Vector3( 0.347, -0.18, 1.2 ), Vector3( 0.347, -0.18, 1 ) ]
 }
 
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "gun_fire",
+"speed": 5.0
+} ]
+
 [node name="Head" type="Spatial"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.64, 0 )
 script = ExtResource( 1 )
@@ -65,3 +80,10 @@ reset_on_save = false
 playback_speed = 8.0
 anims/RESET = SubResource( 3 )
 anims/gun_fire = SubResource( 4 )
+
+[node name="GunUI" type="CanvasLayer" parent="."]
+
+[node name="GunSprite" type="AnimatedSprite" parent="GunUI"]
+position = Vector2( 529, 482 )
+frames = SubResource( 5 )
+animation = "gun_fire"
