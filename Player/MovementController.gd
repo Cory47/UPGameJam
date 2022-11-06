@@ -187,6 +187,8 @@ func _on_Enemy10_karma():
 
 
 func _on_BossRoom_area_entered(area):
+	$Head/Camera/HUD.update_bosstext()
+	$Head/Camera/HUD/BossText.show()
 	self.global_transform.origin = Vector3(0,20,0)
 	pass # Replace with function body.
 
