@@ -18,3 +18,8 @@ func aggro_behavior(delta):
 	$ShotTimer.stop()
 	velocity = -transform.basis.z * 2
 	look_at(transform.origin + velocity.normalized(), Vector3.UP)
+
+
+func _on_MouseSoundTimer_timeout():
+	print("mouse sound")
+	$MouseSound.play()

@@ -169,9 +169,3 @@ skeleton = NodePath("../Floor1")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Lighting"]
 environment = ExtResource( 2 )
-
-[node name="DirectionalLight" type="DirectionalLight" parent="Lighting"]
-transform = Transform( -0.866026, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 5, 0 )
-shadow_enabled = true
-shadow_bias = 0.05
-directional_shadow_max_distance = 250.0
