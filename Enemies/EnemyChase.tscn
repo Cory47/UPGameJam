@@ -7,4 +7,4 @@
 script = ExtResource( 1 )
 
 [node name="Sprite" parent="." index="0"]
-animation = "mouse"
+animation = "Mouse"
