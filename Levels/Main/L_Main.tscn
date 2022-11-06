@@ -1,124 +1,136 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Levels/Main/Geometry/Floor.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Levels/BossTest.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Levels/Main/Environment.tres" type="Environment" id=3]
 [ext_resource path="res://Levels/Main/L_Main.gd" type="Script" id=4]
-[ext_resource path="res://Levels/Main/Geometry/Wall.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Levels/Main/Geometry/Cube.tscn" type="PackedScene" id=6]
-<<<<<<< Updated upstream
-[ext_resource path="res://Levels/Main/HUD.tscn" type="PackedScene" id=7]
-=======
 [ext_resource path="res://Levels/Main/Cory_Main.tscn" type="PackedScene" id=7]
->>>>>>> Stashed changes
 
-[node name="L_Main" type="Spatial"]
-script = ExtResource( 4 )
+[sub_resource type="CylinderShape" id=1]
 
-<<<<<<< Updated upstream
-[node name="Player" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
-=======
 [sub_resource type="BoxShape" id=2]
-extents = Vector3( 30.0758, 3.14312, 56.2742 )
->>>>>>> Stashed changes
+extents = Vector3( 71.2868, 1.97367, 74.4279 )
 
-[node name="ArenaGeometry" type="Spatial" parent="."]
-
-[node name="Floor1" parent="ArenaGeometry" instance=ExtResource( 2 )]
-
-[node name="Wall1" parent="ArenaGeometry" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.75, -20 )
-
-[node name="Wall2" parent="ArenaGeometry" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.75, 20 )
-
-[node name="Wall3" parent="ArenaGeometry" instance=ExtResource( 5 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 20, 5.75, 0 )
-
-[node name="Wall4" parent="ArenaGeometry" instance=ExtResource( 5 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -20, 5.75, 0 )
-
-[node name="Cube1" parent="ArenaGeometry" instance=ExtResource( 6 )]
-transform = Transform( 4, 0, 0, 0, 2, 0, 0, 0, 2, 0, 2.25, -17.5 )
-
-[node name="Slope1" parent="ArenaGeometry" instance=ExtResource( 6 )]
-transform = Transform( 3.5, 0, 0, 0, 1.53209, -2.41045, 0, 1.28558, 2.87267, 0, 0.31, -13.92 )
-
-[node name="Platform1" parent="ArenaGeometry" instance=ExtResource( 6 )]
-transform = Transform( 6.25, 0, 0, 0, 0.25, 0, 0, 0, 2, -13.25, 5.75, -17.5 )
-
-[node name="Platform2" parent="ArenaGeometry" instance=ExtResource( 6 )]
-transform = Transform( 6.25, 0, 0, 0, 0.25, 0, 0, 0, 2, 13.25, 5.75, -17.5 )
-
-[node name="Platform3" parent="ArenaGeometry" instance=ExtResource( 6 )]
-transform = Transform( -2.73196e-07, 0, 2, 0, 0.25, 0, -6.25, 0, -8.74228e-08, -17.5, 5.75, -1.75 )
-
-[node name="Platform4" parent="ArenaGeometry" instance=ExtResource( 6 )]
-transform = Transform( -2.73196e-07, 0, 2, 0, 0.25, 0, -6.25, 0, -8.74228e-08, 17.5, 5.75, -1.75 )
-
-[node name="SlopeEnd1" parent="ArenaGeometry" instance=ExtResource( 6 )]
-transform = Transform( 2, 0, 0, 0, 0.25, 0, 0, 0, 2, 18, 3.5, 17.5 )
-
-[node name="SlopeEnd2" parent="ArenaGeometry" instance=ExtResource( 6 )]
-transform = Transform( 2, 0, 0, 0, 0.25, 0, 0, 0, 2, -18, 3.5, 17.5 )
-
-[node name="Slope2" parent="ArenaGeometry" instance=ExtResource( 6 )]
-transform = Transform( -3.2476, -0.125, -1.74846e-07, -1.875, 0.216506, 0, 2.83914e-07, 1.09278e-08, -2, 12.87, 1.66, 17.5 )
-
-[node name="Slope3" parent="ArenaGeometry" instance=ExtResource( 6 )]
-transform = Transform( 3.2476, 0.125, 0, -1.875, 0.216506, 0, 0, 0, 2, -12.87, 1.66, 17.5 )
-
-[node name="Platform5" parent="ArenaGeometry" instance=ExtResource( 6 )]
-transform = Transform( 2, 0, 0, 0, 0.25, 0, 0, 0, 2, 18, 3.5, 13.5 )
-
-[node name="Platform6" parent="ArenaGeometry" instance=ExtResource( 6 )]
-transform = Transform( 2, 0, 0, 0, 0.25, 0, 0, 0, 2, 14, 3.5, 13.5 )
-
-[node name="Platform7" parent="ArenaGeometry" instance=ExtResource( 6 )]
-transform = Transform( 2, 0, 0, 0, 0.25, 0, 0, 0, 2, 10, 3.5, 13.5 )
-
-[node name="Platform8" parent="ArenaGeometry" instance=ExtResource( 6 )]
-transform = Transform( 2, 0, 0, 0, 0.25, 0, 0, 0, 2, 6, 3.5, 13.5 )
-
-[node name="Platform9" parent="ArenaGeometry" instance=ExtResource( 6 )]
-transform = Transform( 2, 0, 0, 0, 0.25, 0, 0, 0, 2, 2, 3.5, 13.5 )
-
-[node name="Platform10" parent="ArenaGeometry" instance=ExtResource( 6 )]
-transform = Transform( 2, 0, 0, 0, 0.25, 0, 0, 0, 2, -2, 3.5, 13.5 )
-
-[node name="Platform11" parent="ArenaGeometry" instance=ExtResource( 6 )]
-transform = Transform( 2, 0, 0, 0, 0.25, 0, 0, 0, 2, -6, 3.5, 13.5 )
-
-[node name="Platform12" parent="ArenaGeometry" instance=ExtResource( 6 )]
-transform = Transform( 2, 0, 0, 0, 0.25, 0, 0, 0, 2, -10, 3.5, 13.5 )
-
-[node name="Platform13" parent="ArenaGeometry" instance=ExtResource( 6 )]
-transform = Transform( 2, 0, 0, 0, 0.25, 0, 0, 0, 2, -14, 3.5, 13.5 )
-
-[node name="Platform14" parent="ArenaGeometry" instance=ExtResource( 6 )]
-transform = Transform( 2, 0, 0, 0, 0.25, 0, 0, 0, 2, -18, 3.5, 13.5 )
-
-[node name="TooSteep1" parent="ArenaGeometry" instance=ExtResource( 6 )]
-transform = Transform( -3.5, -0.216506, -3.01992e-07, -6.06218, 0.125, -1.51421e-07, 9.87455e-07, 2.32278e-08, -2, 16.5, 5.5, 8.5 )
-
-[node name="TooSteep2" parent="ArenaGeometry" instance=ExtResource( 6 )]
-transform = Transform( 3.5, 0.216506, 0, -6.06218, 0.125, 0, 0, 0, 2, -16.5, 5.5, 8.5 )
+[node name="L_Main2" type="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.85896, 0, 0 )
+script = ExtResource( 4 )
 
 [node name="Lighting" type="Node" parent="."]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Lighting"]
 environment = ExtResource( 3 )
 
-[node name="DirectionalLight" type="DirectionalLight" parent="Lighting"]
-transform = Transform( -0.866026, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 5, 0 )
-shadow_enabled = true
-shadow_bias = 0.05
-directional_shadow_max_distance = 250.0
+[node name="L_Main" parent="Lighting" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0197868, -1.29058, 0.0237013 )
 
-<<<<<<< Updated upstream
-[node name="HUD" parent="." instance=ExtResource( 7 )]
-=======
-[node name="L_Main" parent="." instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.418503, -3.91064, 4.59136 )
->>>>>>> Stashed changes
+[node name="OmniLight" type="OmniLight" parent="Lighting"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 53.3503, 0, 0 )
+light_energy = 0.82
+light_indirect_energy = 0.944
+light_negative = true
+light_specular = 10.478
+omni_range = 7.614
+omni_attenuation = 0.46341
+
+[node name="OmniLight2" type="OmniLight" parent="Lighting"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 32.2654, 0, -5.7423 )
+omni_range = 7.614
+omni_attenuation = 2.2974
+
+[node name="OmniLight3" type="OmniLight" parent="Lighting"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 32.2654, 0, -18.6104 )
+omni_range = 7.614
+omni_attenuation = 2.2974
+
+[node name="OmniLight4" type="OmniLight" parent="Lighting"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 71.6881, 0, -18.6104 )
+omni_range = 7.614
+omni_attenuation = 2.2974
+
+[node name="OmniLight5" type="OmniLight" parent="Lighting"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 53.8319, 0, -18.6104 )
+omni_range = 7.614
+omni_attenuation = 2.2974
+
+[node name="OmniLight6" type="OmniLight" parent="Lighting"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 73.022, 0, 20.6238 )
+omni_range = 7.614
+omni_attenuation = 2.2974
+
+[node name="OmniLight7" type="OmniLight" parent="Lighting"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 61.1818, 0, 20.6238 )
+omni_range = 7.614
+omni_attenuation = 2.2974
+
+[node name="OmniLight8" type="OmniLight" parent="Lighting"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.7711, 0, 20.6238 )
+omni_range = 7.614
+omni_attenuation = 2.2974
+
+[node name="OmniLight10" type="OmniLight" parent="Lighting"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.8276, 13.6499, 0.190966 )
+light_color = Color( 1, 0.819608, 0, 1 )
+light_energy = 5.0
+omni_range = 32.695
+omni_attenuation = 2.2974
+
+[node name="OmniLight9" type="OmniLight" parent="Lighting"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.7711, 0, 4.45255 )
+omni_range = 7.614
+omni_attenuation = 2.2974
+
+[node name="OmniLight11" type="OmniLight" parent="Lighting"]
+transform = Transform( -1, 0, 0, 0, 1, 0, 0, 0, 1, -30.3549, 8.49091, 0.0169415 )
+light_color = Color( 0, 0.815686, 0.109804, 1 )
+light_energy = 8.551
+omni_range = 3.44
+
+[node name="SpotLight" type="SpotLight" parent="Lighting"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -16.9203, 21.307, 0.553701 )
+light_energy = 16.0
+spot_range = 4097.88
+spot_attenuation = 1e-05
+spot_angle = 9.61
+spot_angle_attenuation = 1e+06
+
+[node name="OmniLight12" type="OmniLight" parent="Lighting"]
+transform = Transform( -1, 0, 0, 0, 1, 0, 0, 0, 1, 36.4173, -1.57149, -2.6908 )
+light_color = Color( 0, 0.815686, 0.109804, 1 )
+light_energy = 2.888
+omni_range = 3.44
+
+[node name="OmniLight13" type="OmniLight" parent="Lighting"]
+transform = Transform( -1, 0, 0, 0, 1, 0, 0, 0, 1, 73.5292, -1.57149, -8.42426 )
+light_color = Color( 0, 0.815686, 0.109804, 1 )
+light_energy = 2.888
+omni_range = 3.44
+
+[node name="BossTest" parent="." instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -14.1165, 3.47162, 0.620538 )
+
+[node name="WinArea" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.6747, 5.55051, 0.454601 )
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape" type="CollisionShape" parent="WinArea"]
+shape = SubResource( 1 )
+
+[node name="BossRoom" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -104.335, 0, 0 )
+collision_layer = 256
+collision_mask = 256
+
+[node name="CollisionShape" type="CollisionShape" parent="BossRoom"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 91.7558, 2.16251, 1.97054 )
+shape = SubResource( 2 )
+
+[node name="BossRoom2" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -104.335, -64.2346, 0 )
+collision_layer = 256
+collision_mask = 256
+
+[node name="CollisionShape" type="CollisionShape" parent="BossRoom2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 91.7558, 28.5272, 1.97054 )
+shape = SubResource( 2 )
+
+[connection signal="area_entered" from="WinArea" to="." method="_on_WinArea_area_entered"]

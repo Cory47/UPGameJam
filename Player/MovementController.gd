@@ -23,6 +23,9 @@ onready var gravity = (ProjectSettings.get_setting("physics/3d/default_gravity")
 #gamejam variables
 var karma = 0
 var speed_mod = 1
+var invincible = false
+
+signal died
 
 
 
@@ -102,17 +105,53 @@ func accelerate(delta: float) -> void:
 
 func _on_Area_area_entered(area):
 	speed_mod = speed_mod * .75
-	$Head.ammo += 20
+	$Head.ammo += 10
+	$Head/Camera/HUD.update_ammo(10)
 	print(speed_mod)
+	$PickupSound.play()
+	pass # Replace with function body.
+
+func _on_LavaArea_area_entered(area):
+	get_tree().change_scene("res://Levels/Main/Lose.tscn")
+
+func _on_WinArea_area_entered(area):
+	get_tree().change_scene("res://Levels/Main/winScreen.tscn")
+	
+func _on_Head_change_speed():
+	speed_mod = speed_mod * 1.33
 	pass # Replace with function body.
 
 
+func _on_Enemy2_karma():
+	$Head/Camera/HUD.update_score(1)
+	pass # Replace with function body.
 
 
-<<<<<<< Updated upstream
-func _on_Head_change_speed():
-	speed_mod = speed_mod * 1.33
-=======
+func _on_Enemy_karma():
+	$Head/Camera/HUD.update_score(1)
+	pass # Replace with function body.
+
+
+func _on_Enemy6_karma():
+	$Head/Camera/HUD.update_score(1)
+	pass # Replace with function body.
+
+
+func _on_Enemy7_karma():
+	$Head/Camera/HUD.update_score(1)
+	pass # Replace with function body.
+
+
+func _on_Enemy5_karma():
+	$Head/Camera/HUD.update_score(1)
+	pass # Replace with function body.
+
+
+func _on_Enemy8_karma():
+	$Head/Camera/HUD.update_score(1)
+	pass # Replace with function body.
+
+
 func _on_Enemy9_karma():
 	$Head/Camera/HUD.update_score(1)
 	pass # Replace with function body.
@@ -148,12 +187,10 @@ func _on_Enemy10_karma():
 
 
 func _on_BossRoom_area_entered(area):
-#	get_tree().change_scene("res://Levels/Main/L_Main.tscn")
-	self.global_transform.origin = Vector3(0,50,0)
+	self.global_transform.origin = Vector3(0,20,0)
 	pass # Replace with function body.
 
 
 func _on_Invincibility_timeout():
 	invincible = false
->>>>>>> Stashed changes
 	pass # Replace with function body.

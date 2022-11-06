@@ -1,48 +1,65 @@
-<<<<<<< Updated upstream
-[gd_scene load_steps=7 format=2]
-=======
-[gd_scene load_steps=11 format=2]
->>>>>>> Stashed changes
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Enemies/Enemy.gd" type="Script" id=1]
 [ext_resource path="res://Art/enemy1-1.png" type="Texture" id=2]
 [ext_resource path="res://Art/enemy1-2.png" type="Texture" id=3]
-<<<<<<< Updated upstream
-=======
+[ext_resource path="res://Levels/Main/Bullet.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Art/enemy2-1.png" type="Texture" id=5]
 [ext_resource path="res://Art/enemy2-2.png" type="Texture" id=6]
 [ext_resource path="res://Art/Boss_idle-1.png" type="Texture" id=7]
 [ext_resource path="res://Art/Boss_idle-2.png" type="Texture" id=8]
->>>>>>> Stashed changes
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "Boss",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "Mouse",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
 } ]
 
-[sub_resource type="CapsuleShape" id=2]
-height = 0.530444
+[sub_resource type="CapsuleShape" id=4]
 
 [sub_resource type="SphereShape" id=3]
+radius = 5.01662
 
 [node name="Enemy" type="StaticBody"]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )
 script = ExtResource( 1 )
+BulletScene = ExtResource( 4 )
 
 [node name="Sprite" type="AnimatedSprite3D" parent="."]
 frames = SubResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1.98152, 0, 0, 0, -1.99025e-07, 2.34467, 0, -0.378096, -8.51071e-09, 0, 0, 0 )
-shape = SubResource( 2 )
+transform = Transform( 1.982, 0, 0, 0, -3.30458e-08, 2.345, 0, -0.756, -1.02503e-07, 0, 0, 0 )
+shape = SubResource( 4 )
 
 [node name="AggroRange" type="Area" parent="."]
 
 [node name="CollisionShape" type="CollisionShape" parent="AggroRange"]
-transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 11, 0, 0, 0 )
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0 )
 shape = SubResource( 3 )
+
+[node name="ShotPosition" type="Position3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.097424, -0.591775, -2.97837 )
+
+[node name="ShotTimer" type="Timer" parent="."]
+wait_time = 3.0
+
+[node name="RayCast" type="RayCast" parent="."]
+enabled = true
+cast_to = Vector3( 0, 0, 3 )
 
 [connection signal="body_entered" from="AggroRange" to="." method="_on_AggroRange_body_entered"]
 [connection signal="body_exited" from="AggroRange" to="." method="_on_AggroRange_body_exited"]
+[connection signal="timeout" from="ShotTimer" to="." method="_on_ShotTimer_timeout"]

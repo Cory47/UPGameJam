@@ -1,13 +1,20 @@
 extends StaticBody
 
-var health = 100
+var health = 2
 var aggro = false
+var velocity = Vector3.ZERO
+var canMove = true
 
 signal karma
+signal shoot_bullet
+
+export (PackedScene) var BulletScene
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$Sprite.play("default")
+	var player = get_node("Player")
+	#player.connect("karma", self, "_on_Enemy2_karma")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -18,21 +25,25 @@ func _process(delta):
 	
 	#standy/aggro behavior
 	if(aggro == false):
-		idle_behavior()
+		idle_behavior(delta)
 	else:
-		aggro_behavior()
-		
-	
+		aggro_behavior(delta)
+	print("test")
+	#move towards player
+	if ($RayCast.is_colliding() and $RayCast.get_collider() != null and $RayCast.get_collider().get_class() == "StaticBody"):
+		pass
+	else:
+		transform.origin += velocity * delta
 		
 	if health < 0:
 		die()
 
-#placeholders for base class right now
-func idle_behavior():
-	pass
+func idle_behavior(delta):
+	velocity = Vector3.ZERO
 	
-func aggro_behavior():
-	pass
+func aggro_behavior(delta):
+	velocity = -transform.basis.z * 5
+	look_at(transform.origin + velocity.normalized(), Vector3.UP)
 	
 func die():
 	emit_signal("karma")
@@ -53,8 +64,19 @@ func get_player_pos():
 func _on_AggroRange_body_entered(body):
 	if(body.is_in_group("Player")):
 		aggro = true
+		$ShotTimer.start()
 		print("player entered aggro range")
 func _on_AggroRange_body_exited(body):
 	if(body.is_in_group("Player")):
 		aggro = false
+		$ShotTimer.stop()
 		print("player exited aggro range")
+
+func _on_ShotTimer_timeout():
+	print("enemy shooting")
+	var bullet = BulletScene.instance()
+	owner.add_child(bullet)
+	bullet.transform = $ShotPosition.global_transform
+	bullet.velocity = -bullet.transform.basis.z * bullet.muzzle_velocity
+	bullet.scale = Vector3(0.25, 0.25, 0.25)
+
