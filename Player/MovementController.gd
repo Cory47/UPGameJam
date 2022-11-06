@@ -24,6 +24,8 @@ onready var gravity = (ProjectSettings.get_setting("physics/3d/default_gravity")
 var karma = 0
 var speed_mod = 1
 
+signal died
+
 
 
 
@@ -116,10 +118,51 @@ func _on_Head_change_speed():
 
 
 func _on_Enemy2_karma():
-	$Head/Camera/HUD.update_score()
+	$Head/Camera/HUD.update_score(1)
 	pass # Replace with function body.
 
 
 func _on_Enemy_karma():
 	$Head/Camera/HUD.update_score(1)
+	pass # Replace with function body.
+
+
+func _on_Enemy6_karma():
+	$Head/Camera/HUD.update_score(1)
+	pass # Replace with function body.
+
+
+func _on_Enemy7_karma():
+	$Head/Camera/HUD.update_score(1)
+	pass # Replace with function body.
+
+
+func _on_Enemy5_karma():
+	$Head/Camera/HUD.update_score(1)
+	pass # Replace with function body.
+
+
+func _on_Enemy8_karma():
+	$Head/Camera/HUD.update_score(1)
+	pass # Replace with function body.
+
+
+func _on_Enemy9_karma():
+	$Head/Camera/HUD.update_score(1)
+	pass # Replace with function body.
+
+
+func _on_Enemy3_karma():
+	$Head/Camera/HUD.update_score(1)
+	pass # Replace with function body.
+
+
+func _on_Enemy4_karma():
+	$Head/Camera/HUD.update_score(1)
+	pass # Replace with function body.
+
+
+func _on_Enemy11_karma():
+	$Head/Camera/HUD.update_score(1)
+	
 	pass # Replace with function body.

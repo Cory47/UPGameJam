@@ -45,7 +45,7 @@ transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 11, 0, 0, 0 )
 shape = SubResource( 3 )
 
 [node name="ShotPosition" type="Position3D" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.097424, -0.591775, 0.397646 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.097424, -0.591775, -3.0696 )
 
 [node name="ShotTimer" type="Timer" parent="."]
 

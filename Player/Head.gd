@@ -20,9 +20,11 @@ var damage = 10
 var ammo = 20
 var change_speed = 0
 signal change_speed
-onready var anim_player = $AnimationPlayer
+onready var anim_player = $Camera/HUD/AnimatedSprite
 onready var raycast = $Camera/RayCast
 
+var time = 0
+var fire_enabled = true;
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -33,27 +35,26 @@ func _ready() -> void:
 func fire():
 	if Input.is_action_pressed("ui_shoot") and ammo > 0:
 		#runs once per fire animation
-		if not anim_player.is_playing():
-			ammo -= 1
-			$Camera/HUD.update_ammo(-1)
-			print(ammo, " ammo left")
-			
-			#increases the players speed every 20 shots
-			if change_speed > 19:
-				emit_signal("change_speed")
-				change_speed = 0
-			else:
-				change_speed += 1
-				
+		ammo -= 1
+		$Camera/HUD.update_ammo(-1)
+		print(ammo, " ammo left")
+	
+		#increases the players speed every 20 shots
+		if change_speed > 19:
+			emit_signal("change_speed")
+			change_speed = 0
+		else:
+			change_speed += 1
+		
 			#gets the object colliding and decreases health if enemy
-			if $Camera/RayCast.is_colliding():
-				var target = raycast.get_collider()
-				if target.is_in_group("Enemy"):
-					target.health -= damage
-			
-		anim_player.play("gun_fire")
+		if $Camera/RayCast.is_colliding():
+			var target = raycast.get_collider()
+			if target.is_in_group("Enemy"):
+				target.health -= damage
+		
+		anim_player.play("Firing")
 	else:
-		anim_player.stop()
+		anim_player.play("Idle")
 
 
 # Called when there is an input event
@@ -78,8 +79,14 @@ func camera_rotation() -> void:
 	
 	
 func _physics_process(delta):
-	fire()	
-	if Input.is_action_just_pressed("ui_shoot"):
+	time += delta
+	if (fire_enabled == true):
+		fire_enabled = false
+		time = 0
+		fire()
+	if (time > 0.5):
+		fire_enabled = true
+	if Input.is_action_pressed("ui_shoot"):
 		if $Camera/RayCast.get_collider() and $Camera/RayCast.get_collider().get_class() == "StaticBody" and $Camera/RayCast.get_collider().get_name() == "WallStaticBody":
 				held_object =  $Camera/RayCast.get_collider()
 				held_object.collision_mask = 0
