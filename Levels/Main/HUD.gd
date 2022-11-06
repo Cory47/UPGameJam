@@ -55,4 +55,24 @@ func update_health():
 		get_tree().change_scene("res://Levels/Main/Lose.tscn")
 
 
-
+func update_bosstext():
+	var numkilled = (100 - karma) / 10
+	if numkilled == 0:
+		$BossText.text = "You! Thanks for not killing any of my friends :) \n But you still need to die!"
+		var t = Timer.new()
+		t.set_wait_time(3)
+		t.set_one_shot(true)
+		self.add_child(t)
+		t.start()
+		yield(t, "timeout")
+		$BossText.hide()
+	else:
+		$BossText.text = "You! You killed " + str(numkilled) + " of my friends! \n Now it's your turn to die!"
+		var t = Timer.new()
+		t.set_wait_time(3)
+		t.set_one_shot(true)
+		self.add_child(t)
+		t.start()
+		yield(t, "timeout")
+		$BossText.hide()
+	pass

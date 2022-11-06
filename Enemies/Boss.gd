@@ -3,7 +3,7 @@ extends "res://Enemies/Enemy.gd"
 #var health = 10
 #var aggro = false
 var karma = 1
-var shotTime = 10
+var shotTime = 2
 
 #signal karma
 #signal shoot_bullet

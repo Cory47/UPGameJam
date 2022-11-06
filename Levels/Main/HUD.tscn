@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Levels/Main/HUD.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/CutiePatootie-Rgjv.ttf" type="DynamicFontData" id=2]
@@ -34,6 +34,10 @@ animations = [ {
 "name": "Idle",
 "speed": 5.0
 } ]
+
+[sub_resource type="DynamicFont" id=6]
+size = 40
+font_data = ExtResource( 2 )
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource( 1 )
@@ -114,5 +118,21 @@ animation = "Idle"
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5
+
+[node name="BossText" type="Label" parent="."]
+visible = false
+anchor_right = 0.134
+anchor_bottom = 0.109
+margin_left = 107.0
+margin_top = 176.0
+margin_right = 839.784
+margin_bottom = 203.6
+custom_fonts/font = SubResource( 6 )
+text = "You! You killed _ of my friends! 
+Now it's your turn to die!"
+align = 1
+
+[node name="TextTimer" type="Timer" parent="BossText"]
+wait_time = 4.0
 
 [connection signal="value_changed" from="HealthBar" to="." method="_on_HealthBar_value_changed"]
