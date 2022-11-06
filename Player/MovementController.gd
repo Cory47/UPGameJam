@@ -186,7 +186,7 @@ func _on_Enemy10_karma():
 
 
 func _on_BossRoom_area_entered(area):
-	get_tree().change_scene("res://Levels/Main/L_Main.tscn")
+	self.global_transform.origin = Vector3(0,50,0)
 	pass # Replace with function body.
 
 
