@@ -1,6 +1,6 @@
 extends StaticBody
 
-var health = 100
+var health = 10
 var aggro = false
 var karma = 1
 
@@ -61,7 +61,7 @@ func _on_AggroRange_body_exited(body):
 
 func _on_Enemy_karma():
 	print("add health")
-	health += karma * 100
+	health += karma * 2
 	scale.x = scale.x * 1.2
 	scale.y = scale.y * 1.2
 	scale.z = scale.z * 1.2
@@ -70,7 +70,7 @@ func _on_Enemy_karma():
 
 func _on_Enemy2_karma():
 	print("add health")
-	health += karma * 100
+	health += karma * 2
 	scale.x = scale.x * 1.1
 	scale.y = scale.y * 1.1
 	scale.z = scale.z * 1.1
@@ -79,7 +79,7 @@ func _on_Enemy2_karma():
 
 func _on_Enemy6_karma():
 	print("add health")
-	health += karma * 100
+	health += karma * 2
 	scale.x = scale.x * 1.1
 	scale.y = scale.y * 1.1
 	scale.z = scale.z * 1.1
@@ -88,7 +88,7 @@ func _on_Enemy6_karma():
 
 func _on_Enemy5_karma():
 	print("add health")
-	health += karma * 100
+	health += karma * 2
 	scale.x = scale.x * 1.1
 	scale.y = scale.y * 1.1
 	scale.z = scale.z * 1.1
@@ -97,7 +97,7 @@ func _on_Enemy5_karma():
 
 func _on_Enemy7_karma():
 	print("add health")
-	health += karma * 100
+	health += karma * 2
 	scale.x = scale.x * 1.1
 	scale.y = scale.y * 1.1
 	scale.z = scale.z * 1.1
@@ -106,7 +106,7 @@ func _on_Enemy7_karma():
 
 func _on_Enemy8_karma():
 	print("add health")
-	health += karma * 100
+	health += karma * 2
 	scale.x = scale.x * 1.1
 	scale.y = scale.y * 1.1
 	scale.z = scale.z * 1.1
@@ -115,7 +115,7 @@ func _on_Enemy8_karma():
 
 func _on_Enemy9_karma():
 	print("add health")
-	health += karma * 100
+	health += karma * 2
 	scale.x = scale.x * 1.1
 	scale.y = scale.y * 1.1
 	scale.z = scale.z * 1.1
@@ -124,7 +124,7 @@ func _on_Enemy9_karma():
 
 func _on_Enemy3_karma():
 	print("add health")
-	health += karma * 100
+	health += karma * 2
 	scale.x = scale.x * 1.1
 	scale.y = scale.y * 1.1
 	scale.z = scale.z * 1.1
@@ -133,7 +133,7 @@ func _on_Enemy3_karma():
 
 func _on_Enemy4_karma():
 	print("add health")
-	health += karma * 100
+	health += karma * 2
 	scale.x = scale.x * 1.1
 	scale.y = scale.y * 1.1
 	scale.z = scale.z * 1.1
@@ -142,7 +142,7 @@ func _on_Enemy4_karma():
 
 func _on_Enemy11_karma():
 	print("add health")
-	health += karma * 100
+	health += karma * 2
 	scale.x = scale.x * 1.1
 	scale.y = scale.y * 1.1
 	scale.z = scale.z * 1.1

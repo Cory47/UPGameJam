@@ -1,17 +1,18 @@
 extends CanvasLayer
 
 signal start_game
-var i = 100
 
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-var karma = 100
+var karma = 20
 var ammo = 20
+var health = 100
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$HealthBar.value = health
 	pass # Replace with function body.
 
 func _process(delta):
@@ -44,6 +45,10 @@ func update_ammo(new_ammo):
 #func _process(delta):
 #	pass
 
+func update_health():
+	health -= 10
+	$HealthBar.value = health
+	$HealthLabel.text = str(health)
 
-func _on_HealthBar_value_changed(new_value):
-	$HealthBar.value = i
+
+

@@ -26,6 +26,7 @@ func _process(delta):
 
 func _on_Area_body_entered(body):
 	if body.is_in_group("Player"):
+		
 		pass
 	else:
 		queue_free()

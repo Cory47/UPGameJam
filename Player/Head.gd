@@ -16,7 +16,7 @@ var held_object: Object
 export (PackedScene) var bullet_scene
 
 #gun variables
-var damage = 10
+var damage = 1
 var ammo = 20
 var change_speed = 0
 signal change_speed
@@ -40,7 +40,7 @@ func fire():
 		print(ammo, " ammo left")
 	
 		#increases the players speed every 20 shots
-		if change_speed > 19:
+		if change_speed > 4:
 			emit_signal("change_speed")
 			change_speed = 0
 		else:

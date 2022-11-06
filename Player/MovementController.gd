@@ -104,8 +104,8 @@ func accelerate(delta: float) -> void:
 
 func _on_Area_area_entered(area):
 	speed_mod = speed_mod * .75
-	$Head.ammo += 20
-	$Head/Camera/HUD.update_ammo(20)
+	$Head.ammo += 10
+	$Head/Camera/HUD.update_ammo(10)
 	print(speed_mod)
 	pass # Replace with function body.
 
@@ -165,4 +165,9 @@ func _on_Enemy4_karma():
 func _on_Enemy11_karma():
 	$Head/Camera/HUD.update_score(1)
 	
+	pass # Replace with function body.
+
+
+func _on_BulletCollision_area_entered(area):
+	$Head/Camera/HUD.update_health()
 	pass # Replace with function body.
