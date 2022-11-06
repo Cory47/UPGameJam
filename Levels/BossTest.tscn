@@ -75,7 +75,6 @@ skeleton = NodePath("../Floor1")
 transform = Transform( 2.85144, 0, 0, 0, 0.664201, 0, 0, 0, 2.85144, 0, 0.845546, 0 )
 
 [node name="WinArea" type="Area" parent="ArenaGeometry/Win"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ArenaGeometry/Win/WinArea"]
 shape = SubResource( 2 )
