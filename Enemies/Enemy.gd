@@ -29,7 +29,7 @@ func _process(delta):
 		aggro_behavior(delta)
 	
 	#move towards player
-	transform.origin += velocity * delta
+	transform.origin += velocity * delta * .25
 		
 	if health < 0:
 		die()

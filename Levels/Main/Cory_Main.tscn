@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Levels/Main/Level3.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Levels/Main/L_Main.gd" type="Script" id=6]
 [ext_resource path="res://Player/Ammo.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Enemies/Boss.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Enemies/EnemyChase.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Levels/Main/Geometry/Cube.tscn" type="PackedScene" id=10]
 
 [sub_resource type="ArrayMesh" id=1]
@@ -155,6 +156,9 @@ transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 41.2701, 1.34823, -13.28
 
 [node name="Enemy11" parent="." groups=["Enemy"] instance=ExtResource( 4 )]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 52.9488, 0.657351, -20.7342 )
+
+[node name="EnemyChase" parent="." instance=ExtResource( 9 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 74.0284, -0.836408, 12.1205 )
 
 [connection signal="karma" from="Enemy" to="Player" method="_on_Enemy_karma"]
 [connection signal="karma" from="Enemy" to="Boss" method="_on_Enemy_karma"]
