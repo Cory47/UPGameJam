@@ -28,7 +28,6 @@ func _process(delta):
 		idle_behavior(delta)
 	else:
 		aggro_behavior(delta)
-	print("test")
 	#move towards player
 	if ($RayCast.is_colliding() and $RayCast.get_collider() != null and $RayCast.get_collider().get_class() == "StaticBody"):
 		pass
@@ -65,15 +64,14 @@ func _on_AggroRange_body_entered(body):
 	if(body.is_in_group("Player")):
 		aggro = true
 		$ShotTimer.start()
-		print("player entered aggro range")
+		#print("player entered aggro range")
 func _on_AggroRange_body_exited(body):
 	if(body.is_in_group("Player")):
 		aggro = false
 		$ShotTimer.stop()
-		print("player exited aggro range")
+		#print("player exited aggro range")
 
 func _on_ShotTimer_timeout():
-	print("enemy shooting")
 	var bullet = BulletScene.instance()
 	owner.add_child(bullet)
 	bullet.transform = $ShotPosition.global_transform
