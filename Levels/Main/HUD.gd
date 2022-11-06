@@ -5,7 +5,7 @@ signal start_game
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-var karma = 20
+var karma = 100
 var ammo = 20
 var health = 100
 
@@ -23,20 +23,21 @@ func _process(delta):
 
 
 func update_score(score):
-	karma -= 5
+	karma -= 10
 	$ScoreLabel.text = "Karma: " + str(karma)
-	if karma == 95:
-		$Emoji1.hide()
-		$Emoji2.show()
-	elif karma == 90:
-		$Emoji2.hide()
-		$Emoji3.show()
-	elif karma == 85:
-		$Emoji3.hide()
-		$Emoji4.show()
-	else:
+	if karma < 20:
 		$Emoji4.hide()
 		$Emoji5.show()
+	elif karma < 50:
+		$Emoji3.hide()
+		$Emoji4.show()
+	elif karma < 90:
+		$Emoji2.hide()
+		$Emoji3.show()
+	else:
+		$Emoji1.hide()
+		$Emoji2.show()
+		
 
 func update_ammo(new_ammo):
 	ammo += new_ammo
