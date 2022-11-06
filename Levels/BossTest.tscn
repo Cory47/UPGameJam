@@ -71,7 +71,6 @@ transform = Transform( 2.85144, 0, 0, 0, 0.664201, 0, 0, 0, 2.85144, 0, 0.845546
 
 [node name="WinArea" type="Area" parent="ArenaGeometry/Win"]
 
-
 [node name="CollisionShape" type="CollisionShape" parent="ArenaGeometry/Win/WinArea"]
 transform = Transform( 1.04929, 0, 0, 0, 1.09083, 0, 0, 0, 1.05396, 0, 0, 0 )
 shape = SubResource( 2 )
