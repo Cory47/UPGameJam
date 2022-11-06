@@ -13,7 +13,7 @@ var shotTime = 10
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	health = 10
-	$Sprite.play("boss")
+	$Sprite.play("Boss")
 	$ShotTimer.wait_time = shotTime
 
 

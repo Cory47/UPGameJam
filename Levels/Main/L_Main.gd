@@ -42,5 +42,10 @@ func _unhandled_input(event: InputEvent) -> void:
 
 
 func _on_BossRoom_area_entered(area):
-	get_tree().change_scene("res://Levels/Main/L_Main.tscn")
+	
+	pass # Replace with function body.
+
+
+func _on_WinArea_area_entered(area):
+	get_tree().change_scene("res://Levels/Main/winScreen.tscn")
 	pass # Replace with function body.
