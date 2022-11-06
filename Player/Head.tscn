@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Player/Head.gd" type="Script" id=1]
 [ext_resource path="res://Levels/Main/HUD.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Player/AudioStreamPlayer.gd" type="Script" id=3]
 
 [sub_resource type="GDScript" id=5]
 script/source = "extends Spatial
@@ -120,3 +121,6 @@ reset_on_save = false
 playback_speed = 8.0
 anims/RESET = SubResource( 9 )
 anims/gun_fire = SubResource( 4 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+script = ExtResource( 3 )
