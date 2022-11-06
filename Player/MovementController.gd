@@ -187,7 +187,10 @@ func _on_Enemy10_karma():
 
 func _on_BossRoom_area_entered(area):
 	self.global_transform.origin = Vector3(0,20,0)
-	pass # Replace with function body.
+	$Head/AudioStreamPlayer.stop()
+	var audioStream: AudioStream = preload("res://Sounds/slappyboss.mp3")
+	$Head/AudioStreamPlayer.set_stream(audioStream)
+	$Head/AudioStreamPlayer.play()
 
 
 func _on_Invincibility_timeout():
