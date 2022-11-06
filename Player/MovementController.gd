@@ -23,6 +23,7 @@ onready var gravity = (ProjectSettings.get_setting("physics/3d/default_gravity")
 #gamejam variables
 var karma = 0
 var speed_mod = 1
+var invincible = false
 
 signal died
 
@@ -170,10 +171,23 @@ func _on_Enemy11_karma():
 
 
 func _on_BulletCollision_area_entered(area):
-	$Head/Camera/HUD.update_health()
+	if invincible == false:
+		$Head/Camera/HUD.update_health()
+		invincible = true
+		$Invincibility.start()
 	pass # Replace with function body.
 
 
 func _on_Enemy10_karma():
 	$Head/Camera/HUD.update_score(1)
+	pass # Replace with function body.
+
+
+func _on_BossRoom_area_entered(area):
+	get_tree().change_scene("res://Levels/Main/L_Main.tscn")
+	pass # Replace with function body.
+
+
+func _on_Invincibility_timeout():
+	invincible = false
 	pass # Replace with function body.
