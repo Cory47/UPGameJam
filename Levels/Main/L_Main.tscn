@@ -15,8 +15,13 @@
 [node name="L_Main" type="Spatial"]
 script = ExtResource( 4 )
 
+<<<<<<< Updated upstream
 [node name="Player" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
+=======
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 30.0758, 3.14312, 56.2742 )
+>>>>>>> Stashed changes
 
 [node name="ArenaGeometry" type="Spatial" parent="."]
 
