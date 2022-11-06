@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/yippee.mp3-9e015650ffbd295ecd5f0315d9ac0c72.mp3str"
+
+[deps]
+
+source_file="res://Sounds/yippee.mp3"
+dest_files=[ "res://.import/yippee.mp3-9e015650ffbd295ecd5f0315d9ac0c72.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
