@@ -3,13 +3,14 @@ extends StaticBody
 var health = 10
 var aggro = false
 var karma = 1
+var shotTime = 5
 
 signal karma
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	
-	pass # Replace with function body.
+	$Sprite.play("boss")
+	$ShotTimer.wait_time = shotTime
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -52,10 +53,12 @@ func get_player_pos():
 func _on_AggroRange_body_entered(body):
 	if(body.is_in_group("Player")):
 		aggro = true
+		$ShotTimer.start()
 		print("player entered aggro range")
 func _on_AggroRange_body_exited(body):
 	if(body.is_in_group("Player")):
 		aggro = false
+		$ShotTimer.stop()
 		print("player exited aggro range")
 
 
@@ -65,6 +68,7 @@ func _on_Enemy_karma():
 	scale.x = scale.x * 1.2
 	scale.y = scale.y * 1.2
 	scale.z = scale.z * 1.2
+	$ShotTimer.wait_time = $ShotTimer.wait_time * 0.9
 	pass # Replace with function body.
 
 
@@ -74,6 +78,7 @@ func _on_Enemy2_karma():
 	scale.x = scale.x * 1.2
 	scale.y = scale.y * 1.2
 	scale.z = scale.z * 1.2
+	$ShotTimer.wait_time = $ShotTimer.wait_time * 0.9
 	pass # Replace with function body.
 
 
@@ -83,6 +88,7 @@ func _on_Enemy6_karma():
 	scale.x = scale.x * 1.2
 	scale.y = scale.y * 1.2
 	scale.z = scale.z * 1.2
+	$ShotTimer.wait_time = $ShotTimer.wait_time * 0.9
 	pass # Replace with function body.
 
 
@@ -92,6 +98,7 @@ func _on_Enemy5_karma():
 	scale.x = scale.x * 1.2
 	scale.y = scale.y * 1.2
 	scale.z = scale.z * 1.2
+	$ShotTimer.wait_time = $ShotTimer.wait_time * 0.9
 	pass # Replace with function body.
 
 
@@ -101,6 +108,7 @@ func _on_Enemy7_karma():
 	scale.x = scale.x * 1.2
 	scale.y = scale.y * 1.2
 	scale.z = scale.z * 1.2
+	$ShotTimer.wait_time = $ShotTimer.wait_time * 0.9
 	pass # Replace with function body.
 
 
@@ -110,6 +118,7 @@ func _on_Enemy8_karma():
 	scale.x = scale.x * 1.2
 	scale.y = scale.y * 1.2
 	scale.z = scale.z * 1.2
+	$ShotTimer.wait_time = $ShotTimer.wait_time * 0.9
 	pass # Replace with function body.
 
 
@@ -119,6 +128,7 @@ func _on_Enemy9_karma():
 	scale.x = scale.x * 1.2
 	scale.y = scale.y * 1.2
 	scale.z = scale.z * 1.2
+	$ShotTimer.wait_time = $ShotTimer.wait_time * 0.9
 	pass # Replace with function body.
 
 
@@ -128,6 +138,7 @@ func _on_Enemy3_karma():
 	scale.x = scale.x * 1.2
 	scale.y = scale.y * 1.2
 	scale.z = scale.z * 1.2
+	$ShotTimer.wait_time = $ShotTimer.wait_time * 0.9
 	pass # Replace with function body.
 
 
@@ -137,6 +148,7 @@ func _on_Enemy4_karma():
 	scale.x = scale.x * 1.2
 	scale.y = scale.y * 1.2
 	scale.z = scale.z * 1.2
+	$ShotTimer.wait_time = $ShotTimer.wait_time * 0.9
 	pass # Replace with function body.
 
 
@@ -146,6 +158,7 @@ func _on_Enemy11_karma():
 	scale.x = scale.x * 1.2
 	scale.y = scale.y * 1.2
 	scale.z = scale.z * 1.2
+	$ShotTimer.wait_time = $ShotTimer.wait_time * 0.9
 	pass # Replace with function body.
 
 
@@ -155,4 +168,5 @@ func _on_Enemy10_karma():
 	scale.x = scale.x * 1.2
 	scale.y = scale.y * 1.2
 	scale.z = scale.z * 1.2
+	$ShotTimer.wait_time = $ShotTimer.wait_time * 0.9
 	pass # Replace with function body.
