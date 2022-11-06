@@ -40,7 +40,7 @@ func fire():
 		print(ammo, " ammo left")
 	
 		#increases the players speed every 20 shots
-		if change_speed > 4:
+		if change_speed > 9:
 			emit_signal("change_speed")
 			change_speed = 0
 		else:

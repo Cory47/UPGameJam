@@ -1,65 +1,68 @@
-extends StaticBody
+extends "res://Enemies/Enemy.gd"
 
-var health = 10
-var aggro = false
+#var health = 10
+#var aggro = false
 var karma = 1
-var shotTime = 5
+var shotTime = 10
 
-signal karma
+#signal karma
+#signal shoot_bullet
+
+#export (PackedScene) var BulletScene
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	health = 10
 	$Sprite.play("boss")
 	$ShotTimer.wait_time = shotTime
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	#makes sprite face player
-	var player_pos = get_player_pos()
-	look_at(player_pos, Vector3.UP)
-	
-	#standy/aggro behavior
-	if(aggro == false):
-		idle_behavior()
-	else:
-		aggro_behavior()
-		
-	
-		
-	if health < 0:
-		die()
+#func _process(delta):
+#	#makes sprite face player
+#	var player_pos = get_player_pos()
+#	look_at(player_pos, Vector3.UP)
+#
+#	#standy/aggro behavior
+#	if(aggro == false):
+#		idle_behavior()
+#	else:
+#		aggro_behavior()
+#
+#
+#
+#	if health < 0:
+#		die()
 
 #placeholders for base class right now
-func idle_behavior():
+func idle_behavior(delta):
 	pass
 	
-func aggro_behavior():
+func aggro_behavior(delta):
 	pass
 	
 func die():
-	
 	queue_free()
 	
 #gets adjusted player position to rotate enemy sprite, ignores up/down rotation
-func get_player_pos():
-	var player_pos = $".".get_parent().get_node_or_null("Player").global_transform.origin
-	var adjusted_pos = Vector3(player_pos.x, $".".global_transform.origin.y, player_pos.z)
-	
-	return adjusted_pos
+#func get_player_pos():
+#	var player_pos = $".".get_parent().get_node_or_null("Player").global_transform.origin
+#	var adjusted_pos = Vector3(player_pos.x, $".".global_transform.origin.y, player_pos.z)
+#
+#	return adjusted_pos
 	
 
 #determines enemy behavior when player is nearby
-func _on_AggroRange_body_entered(body):
-	if(body.is_in_group("Player")):
-		aggro = true
-		$ShotTimer.start()
-		print("player entered aggro range")
-func _on_AggroRange_body_exited(body):
-	if(body.is_in_group("Player")):
-		aggro = false
-		$ShotTimer.stop()
-		print("player exited aggro range")
+#func _on_AggroRange_body_entered(body):
+#	if(body.is_in_group("Player")):
+#		aggro = true
+#		$ShotTimer.start()
+#		print("player entered aggro range")
+#func _on_AggroRange_body_exited(body):
+#	if(body.is_in_group("Player")):
+#		aggro = false
+#		$ShotTimer.stop()
+#		print("player exited aggro range")
 
 
 func _on_Enemy_karma():

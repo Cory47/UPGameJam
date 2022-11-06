@@ -7,7 +7,7 @@ signal start_game
 # var b = "text"
 var karma = 100
 var ammo = 20
-var health = 100
+var health = 1000
 
 
 # Called when the node enters the scene tree for the first time.
