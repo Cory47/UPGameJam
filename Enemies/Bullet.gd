@@ -16,7 +16,7 @@ func setExist(state):
 	exist = state
 # Called when the node enters the scene tree for the first time.
 func _process(delta):
-	velocity += g * delta
+	#velocity += g * delta
 	look_at(transform.origin + velocity.normalized(), Vector3.UP)
 	transform.origin += velocity * delta
 

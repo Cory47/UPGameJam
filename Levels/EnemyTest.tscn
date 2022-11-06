@@ -5,7 +5,6 @@
 [ext_resource path="res://Player/Ammo.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Enemies/Boss.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Enemies/EnemyChase.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Player/MovementController.gd" type="Script" id=6]
 
 [node name="EnemyTest" instance=ExtResource( 1 )]
 
