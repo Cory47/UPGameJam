@@ -33,10 +33,14 @@ func _input(event: InputEvent) -> void:
 			Input.MOUSE_MODE_VISIBLE:
 				Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
-
 # Capture mouse if clicked on the game, needed for HTML5
 # Called when an InputEvent hasn't been consumed by _input() or any GUI item
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 			if event.button_index == BUTTON_LEFT && event.pressed:
 				Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
+
+func _on_BossRoom_area_entered(area):
+	get_tree().change_scene("res://Levels/Main/L_Main.tscn")
+	pass # Replace with function body.

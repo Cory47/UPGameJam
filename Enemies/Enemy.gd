@@ -3,6 +3,7 @@ extends StaticBody
 var health = 2
 var aggro = false
 var velocity = Vector3.ZERO
+var canMove = true
 
 signal karma
 signal shoot_bullet
@@ -27,9 +28,12 @@ func _process(delta):
 		idle_behavior(delta)
 	else:
 		aggro_behavior(delta)
-	
+	print("test")
 	#move towards player
-	transform.origin += velocity * delta
+	if ($RayCast.is_colliding() and $RayCast.get_collider() != null and $RayCast.get_collider().get_class() == "StaticBody"):
+		pass
+	else:
+		transform.origin += velocity * delta
 		
 	if health < 0:
 		die()
