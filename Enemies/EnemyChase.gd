@@ -1,9 +1,9 @@
 extends "res://Enemies/Enemy.gd"
-var velocity = Vector3.ZERO
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$Sprite.play("mouse")
+	$AggroRange/CollisionShape.scale = Vector3(5,5,5)
 	$ShotTimer.stop()
 
 
@@ -16,5 +16,5 @@ func idle_behavior(delta):
 	
 func aggro_behavior(delta):
 	$ShotTimer.stop()
-	velocity = -transform.basis.z * 15
+	velocity = -transform.basis.z * 10
 	look_at(transform.origin + velocity.normalized(), Vector3.UP)

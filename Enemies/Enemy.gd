@@ -2,6 +2,7 @@ extends StaticBody
 
 var health = 2
 var aggro = false
+var velocity = Vector3.ZERO
 
 signal karma
 signal shoot_bullet
@@ -26,17 +27,19 @@ func _process(delta):
 		idle_behavior(delta)
 	else:
 		aggro_behavior(delta)
-		
 	
+	#move towards player
+	transform.origin += velocity * delta
 		
 	if health < 0:
 		die()
 
 func idle_behavior(delta):
-	pass
+	velocity = Vector3.ZERO
 	
 func aggro_behavior(delta):
-	pass
+	velocity = -transform.basis.z * 5
+	look_at(transform.origin + velocity.normalized(), Vector3.UP)
 	
 func die():
 	emit_signal("karma")
