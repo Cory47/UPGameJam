@@ -8,6 +8,8 @@
 [ext_resource path="res://Player/Ammo.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Enemies/Boss.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Levels/Main/Geometry/BreakableWall.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Enemies/EnemyChase.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Fonts/CutiePatootie-Rgjv.ttf" type="DynamicFontData" id=11]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "Cube"
@@ -30,6 +32,10 @@ data = PoolVector3Array( -0.2675, 2.5182, 0.1504, -0.2675, 7.2413, 0.1504, -0.26
 
 [sub_resource type="BoxShape" id=3]
 extents = Vector3( 3.35836, 1.71275, 3.88898 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 65
+font_data = ExtResource( 11 )
 
 [node name="L_Main" type="Spatial"]
 script = ExtResource( 6 )
@@ -84,7 +90,7 @@ transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 32.6209, 0.949031, 19.38
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 48.4588, 0.99091, 17.4377 )
 
 [node name="Enemy5" parent="." groups=["Enemy"] instance=ExtResource( 4 )]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 57.2537, 0.276054, 21.6455 )
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 41.8319, 0.276054, 21.6455 )
 
 [node name="Enemy7" parent="." groups=["Enemy"] instance=ExtResource( 4 )]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 64.7529, 0.685894, 21.8314 )
@@ -126,6 +132,23 @@ shape = SubResource( 3 )
 
 [node name="Ammo3" parent="." instance=ExtResource( 7 )]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -30, 10.255, 0 )
+
+[node name="EnemyChase2" parent="." instance=ExtResource( 10 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 72.3632, 0.146387, 11.9679 )
+
+[node name="EnemyChase3" parent="." instance=ExtResource( 10 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 66.8368, 1.42415, -20.2476 )
+
+[node name="Ammo4" parent="." instance=ExtResource( 7 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 57.1629, -0.593379, 19.6795 )
+
+[node name="EnemyChase4" parent="." instance=ExtResource( 10 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 32.8904, 9.53674e-07, 13.8056 )
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 61.6346, 1.23246, 2.49791 )
+text = "Boss Room"
+font = SubResource( 4 )
 
 [connection signal="karma" from="Enemy" to="Player" method="_on_Enemy_karma"]
 [connection signal="karma" from="Enemy" to="Boss" method="_on_Enemy_karma"]

@@ -24,8 +24,6 @@ func _ready():
 
 
 func _on_play_again_pressed():
-	if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	get_tree().change_scene(\"res://Levels/Main/Start.tscn\")
 "
 
