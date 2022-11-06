@@ -112,7 +112,9 @@ func _on_Area_area_entered(area):
 func _on_LavaArea_area_entered(area):
 	get_tree().change_scene("res://Levels/Main/Lose.tscn")
 
-
+func _on_WinArea_area_entered(area):
+	pass
+	
 func _on_Head_change_speed():
 	speed_mod = speed_mod * 1.33
 	pass # Replace with function body.
