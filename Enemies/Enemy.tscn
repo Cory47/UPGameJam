@@ -1,9 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Enemies/Enemy.gd" type="Script" id=1]
 [ext_resource path="res://Art/enemy1-1.png" type="Texture" id=2]
 [ext_resource path="res://Art/enemy1-2.png" type="Texture" id=3]
 [ext_resource path="res://Levels/Main/Bullet.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Art/enemy2-2.png" type="Texture" id=5]
+[ext_resource path="res://Art/enemy2-1.png" type="Texture" id=6]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -11,10 +13,16 @@ animations = [ {
 "loop": true,
 "name": "default",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "mouse",
+"speed": 5.0
 } ]
 
 [sub_resource type="CapsuleShape" id=2]
-height = 0.530444
+radius = 0.684782
+height = 0.002
 
 [sub_resource type="SphereShape" id=3]
 radius = 5.01662

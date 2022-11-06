@@ -1,11 +1,23 @@
-[gd_scene load_steps=11 format=2]
+
+
+[gd_scene load_steps=12 format=2]
+
+
 
 [ext_resource path="res://Levels/Main/HUD.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/CutiePatootie-Rgjv.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Art/HealthBarRed.png" type="Texture" id=3]
 [ext_resource path="res://Art/crosshair.png" type="Texture" id=4]
+
+[ext_resource path="res://Art/emoji4.png" type="Texture" id=5]
+[ext_resource path="res://Art/emoji1.png" type="Texture" id=6]
+[ext_resource path="res://Art/emoji2.png" type="Texture" id=7]
+[ext_resource path="res://Art/emoji3.png" type="Texture" id=8]
+[ext_resource path="res://Art/emoji5.png" type="Texture" id=9]
+
 [ext_resource path="res://Art/gun1.png" type="Texture" id=5]
 [ext_resource path="res://Art/gun2.png" type="Texture" id=6]
+
 
 [sub_resource type="Theme" id=2]
 
@@ -73,6 +85,36 @@ tint_progress = Color( 0.984314, 0, 0, 1 )
 texture = ExtResource( 4 )
 offset = Vector2( 512, 300 )
 
+
+[node name="Emoji1" type="Sprite" parent="."]
+position = Vector2( 192, 35 )
+scale = Vector2( 0.2875, 0.2875 )
+texture = ExtResource( 6 )
+
+[node name="Emoji2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 192, 35 )
+scale = Vector2( 0.2875, 0.2875 )
+texture = ExtResource( 7 )
+
+[node name="Emoji3" type="Sprite" parent="."]
+visible = false
+position = Vector2( 192, 35 )
+scale = Vector2( 0.2875, 0.2875 )
+texture = ExtResource( 8 )
+
+[node name="Emoji4" type="Sprite" parent="."]
+visible = false
+position = Vector2( 192, 35 )
+scale = Vector2( 0.2875, 0.2875 )
+texture = ExtResource( 5 )
+
+[node name="Emoji5" type="Sprite" parent="."]
+visible = false
+position = Vector2( 192, 35 )
+scale = Vector2( 0.2875, 0.2875 )
+texture = ExtResource( 9 )
+
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 729, 487 )
 frames = SubResource( 5 )
@@ -80,3 +122,8 @@ animation = "Idle"
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5
+
+
+
+[connection signal="value_changed" from="HealthBar" to="." method="_on_HealthBar_value_changed"]
+

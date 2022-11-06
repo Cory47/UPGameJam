@@ -23,9 +23,20 @@ func _process(delta):
 
 
 func update_score(score):
-	karma -= 1
+	karma -= 5
 	$ScoreLabel.text = "Karma: " + str(karma)
-	
+	if karma == 95:
+		$Emoji1.hide()
+		$Emoji2.show()
+	elif karma == 90:
+		$Emoji2.hide()
+		$Emoji3.show()
+	elif karma == 85:
+		$Emoji3.hide()
+		$Emoji4.show()
+	else:
+		$Emoji4.hide()
+		$Emoji5.show()
 
 func update_ammo(new_ammo):
 	ammo += new_ammo
