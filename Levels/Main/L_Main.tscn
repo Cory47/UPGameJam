@@ -8,10 +8,9 @@
 [sub_resource type="CylinderShape" id=1]
 
 [sub_resource type="BoxShape" id=2]
-extents = Vector3( 71.2868, 1.97367, 74.4279 )
+extents = Vector3( 30.0758, 3.14312, 56.2742 )
 
 [node name="L_Main2" type="Spatial"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.85896, 0, 0 )
 script = ExtResource( 4 )
 
 [node name="Lighting" type="Node" parent="."]
@@ -20,10 +19,8 @@ script = ExtResource( 4 )
 environment = ExtResource( 3 )
 
 [node name="L_Main" parent="Lighting" instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0197868, -1.29058, 0.0237013 )
 
 [node name="OmniLight" type="OmniLight" parent="Lighting"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 53.3503, 0, 0 )
 light_energy = 0.82
 light_indirect_energy = 0.944
 light_negative = true
@@ -32,60 +29,60 @@ omni_range = 7.614
 omni_attenuation = 0.46341
 
 [node name="OmniLight2" type="OmniLight" parent="Lighting"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 32.2654, 0, -5.7423 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.7423 )
 omni_range = 7.614
 omni_attenuation = 2.2974
 
 [node name="OmniLight3" type="OmniLight" parent="Lighting"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 32.2654, 0, -18.6104 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -18.6104 )
 omni_range = 7.614
 omni_attenuation = 2.2974
 
 [node name="OmniLight4" type="OmniLight" parent="Lighting"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 71.6881, 0, -18.6104 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -18.6104 )
 omni_range = 7.614
 omni_attenuation = 2.2974
 
 [node name="OmniLight5" type="OmniLight" parent="Lighting"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 53.8319, 0, -18.6104 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -18.6104 )
 omni_range = 7.614
 omni_attenuation = 2.2974
 
 [node name="OmniLight6" type="OmniLight" parent="Lighting"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 73.022, 0, 20.6238 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20.6238 )
 omni_range = 7.614
 omni_attenuation = 2.2974
 
 [node name="OmniLight7" type="OmniLight" parent="Lighting"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 61.1818, 0, 20.6238 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20.6238 )
 omni_range = 7.614
 omni_attenuation = 2.2974
 
 [node name="OmniLight8" type="OmniLight" parent="Lighting"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.7711, 0, 20.6238 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20.6238 )
 omni_range = 7.614
 omni_attenuation = 2.2974
 
 [node name="OmniLight10" type="OmniLight" parent="Lighting"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.8276, 13.6499, 0.190966 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.6499, 0.190966 )
 light_color = Color( 1, 0.819608, 0, 1 )
 light_energy = 5.0
 omni_range = 32.695
 omni_attenuation = 2.2974
 
 [node name="OmniLight9" type="OmniLight" parent="Lighting"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.7711, 0, 4.45255 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.45255 )
 omni_range = 7.614
 omni_attenuation = 2.2974
 
 [node name="OmniLight11" type="OmniLight" parent="Lighting"]
-transform = Transform( -1, 0, 0, 0, 1, 0, 0, 0, 1, -30.3549, 8.49091, 0.0169415 )
+transform = Transform( -1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.49091, 0.0169415 )
 light_color = Color( 0, 0.815686, 0.109804, 1 )
 light_energy = 8.551
 omni_range = 3.44
 
 [node name="SpotLight" type="SpotLight" parent="Lighting"]
-transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -16.9203, 21.307, 0.553701 )
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 21.307, 0.553701 )
 light_energy = 16.0
 spot_range = 4097.88
 spot_attenuation = 1e-05
@@ -93,19 +90,19 @@ spot_angle = 9.61
 spot_angle_attenuation = 1e+06
 
 [node name="OmniLight12" type="OmniLight" parent="Lighting"]
-transform = Transform( -1, 0, 0, 0, 1, 0, 0, 0, 1, 36.4173, -1.57149, -2.6908 )
+transform = Transform( -1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.57149, -2.6908 )
 light_color = Color( 0, 0.815686, 0.109804, 1 )
 light_energy = 2.888
 omni_range = 3.44
 
 [node name="OmniLight13" type="OmniLight" parent="Lighting"]
-transform = Transform( -1, 0, 0, 0, 1, 0, 0, 0, 1, 73.5292, -1.57149, -8.42426 )
+transform = Transform( -1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.57149, -8.42426 )
 light_color = Color( 0, 0.815686, 0.109804, 1 )
 light_energy = 2.888
 omni_range = 3.44
 
 [node name="BossTest" parent="." instance=ExtResource( 2 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -14.1165, 3.47162, 0.620538 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 3.47162, 0.620538 )
 
 [node name="WinArea" type="Area" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.6747, 5.55051, 0.454601 )
@@ -121,7 +118,7 @@ collision_layer = 256
 collision_mask = 256
 
 [node name="CollisionShape" type="CollisionShape" parent="BossRoom"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 91.7558, 2.16251, 1.97054 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.16251, 1.97054 )
 shape = SubResource( 2 )
 
 [node name="BossRoom2" type="Area" parent="."]
@@ -130,7 +127,7 @@ collision_layer = 256
 collision_mask = 256
 
 [node name="CollisionShape" type="CollisionShape" parent="BossRoom2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 91.7558, 28.5272, 1.97054 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 28.5272, 1.97054 )
 shape = SubResource( 2 )
 
 [connection signal="area_entered" from="WinArea" to="." method="_on_WinArea_area_entered"]
