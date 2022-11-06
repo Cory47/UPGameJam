@@ -49,7 +49,7 @@ func update_ammo(new_ammo):
 func update_health():
 	health -= 10
 	$HealthBar.value = health
-	$HealthLabel.text = str(health)
+	$HealthLabel.text = "Health: " + str(health)
 	
 	if health <= 0:
 		get_tree().change_scene("res://Levels/Main/Lose.tscn")
