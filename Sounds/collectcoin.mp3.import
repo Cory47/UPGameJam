@@ -11,6 +11,5 @@ dest_files=[ "res://.import/collectcoin.mp3-4b73ed0c7ebb5f980cf6777db530d61e.mp3
 
 [params]
 
-
 loop=false
 loop_offset=0
