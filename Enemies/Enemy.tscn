@@ -40,7 +40,6 @@ shape = SubResource( 3 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.097424, -0.591775, 0.397646 )
 
 [node name="ShotTimer" type="Timer" parent="."]
-autostart = true
 
 [connection signal="body_entered" from="AggroRange" to="." method="_on_AggroRange_body_entered"]
 [connection signal="body_exited" from="AggroRange" to="." method="_on_AggroRange_body_exited"]

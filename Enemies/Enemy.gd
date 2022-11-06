@@ -58,10 +58,12 @@ func get_player_pos():
 func _on_AggroRange_body_entered(body):
 	if(body.is_in_group("Player")):
 		aggro = true
+		$ShotTimer.start()
 		print("player entered aggro range")
 func _on_AggroRange_body_exited(body):
 	if(body.is_in_group("Player")):
 		aggro = false
+		$ShotTimer.stop()
 		print("player exited aggro range")
 
 func _on_ShotTimer_timeout():
