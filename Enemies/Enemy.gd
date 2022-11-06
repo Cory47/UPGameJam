@@ -28,7 +28,7 @@ func _process(delta):
 		idle_behavior(delta)
 	else:
 		aggro_behavior(delta)
-	print("test")
+	#print("test")
 	#move towards player
 	if ($RayCast.is_colliding() and $RayCast.get_collider() != null and $RayCast.get_collider().get_class() == "StaticBody"):
 		pass
