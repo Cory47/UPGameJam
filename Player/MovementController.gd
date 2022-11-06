@@ -109,6 +109,51 @@ func _on_Area_area_entered(area):
 
 
 
+<<<<<<< Updated upstream
 func _on_Head_change_speed():
 	speed_mod = speed_mod * 1.33
+=======
+func _on_Enemy9_karma():
+	$Head/Camera/HUD.update_score(1)
+	pass # Replace with function body.
+
+
+func _on_Enemy3_karma():
+	$Head/Camera/HUD.update_score(1)
+	pass # Replace with function body.
+
+
+func _on_Enemy4_karma():
+	$Head/Camera/HUD.update_score(1)
+	pass # Replace with function body.
+
+
+func _on_Enemy11_karma():
+	$Head/Camera/HUD.update_score(1)
+	
+	pass # Replace with function body.
+
+
+func _on_BulletCollision_area_entered(area):
+	if invincible == false:
+		$Head/Camera/HUD.update_health()
+		invincible = true
+		$Invincibility.start()
+	pass # Replace with function body.
+
+
+func _on_Enemy10_karma():
+	$Head/Camera/HUD.update_score(1)
+	pass # Replace with function body.
+
+
+func _on_BossRoom_area_entered(area):
+#	get_tree().change_scene("res://Levels/Main/L_Main.tscn")
+	self.global_transform.origin = Vector3(0,50,0)
+	pass # Replace with function body.
+
+
+func _on_Invincibility_timeout():
+	invincible = false
+>>>>>>> Stashed changes
 	pass # Replace with function body.
