@@ -115,6 +115,7 @@ func _on_LavaArea_area_entered(area):
 	get_tree().change_scene("res://Levels/Main/Lose.tscn")
 
 func _on_WinArea_area_entered(area):
+	$Head/Boss_Sound.stop()
 	get_tree().change_scene("res://Levels/Main/winScreen.tscn")
 	
 func _on_Head_change_speed():
