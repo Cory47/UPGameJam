@@ -1,12 +1,21 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Enemies/Enemy.gd" type="Script" id=1]
 [ext_resource path="res://Art/enemy1-1.png" type="Texture" id=2]
 [ext_resource path="res://Art/enemy1-2.png" type="Texture" id=3]
 [ext_resource path="res://Levels/Main/Bullet.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Art/enemy2-1.png" type="Texture" id=5]
+[ext_resource path="res://Art/enemy2-2.png" type="Texture" id=6]
+[ext_resource path="res://Art/Boss_idle-1.png" type="Texture" id=7]
+[ext_resource path="res://Art/Boss_idle-2.png" type="Texture" id=8]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "boss",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
 "loop": true,
 "name": "default",
@@ -42,6 +51,7 @@ shape = SubResource( 3 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.097424, -0.591775, -3.0696 )
 
 [node name="ShotTimer" type="Timer" parent="."]
+wait_time = 3.0
 
 [connection signal="body_entered" from="AggroRange" to="." method="_on_AggroRange_body_entered"]
 [connection signal="body_exited" from="AggroRange" to="." method="_on_AggroRange_body_exited"]
