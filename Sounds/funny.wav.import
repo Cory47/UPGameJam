@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/funny.wav-6e1f0673cc70a790965aadc735492f41.sample"
+
+[deps]
+
+source_file="res://Sounds/funny.wav"
+dest_files=[ "res://.import/funny.wav-6e1f0673cc70a790965aadc735492f41.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
