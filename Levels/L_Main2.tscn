@@ -14,3 +14,6 @@ transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 13.0636, 1.73712, 0 )
 
 [node name="Boss" parent="." index="4" instance=ExtResource( 4 )]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1.44461, -10.2508 )
+
+[node name="CollisionShape" parent="BossRoom" index="0"]
+transform = Transform( 0.5, 0, 0, 0, 1, 0, 0, 0, 0.5, 91.7558, 2.16251, 1.97054 )
