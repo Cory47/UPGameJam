@@ -18,5 +18,5 @@ func _process(delta):
 
 func _on_play_again_pressed():
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	get_tree().change_scene("res://Levels/Main/Start.tscn")
+	get_tree().change_scene("res://Levels/Main/Start.gd")
 	pass # Replace with function body.
