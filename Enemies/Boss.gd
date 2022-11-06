@@ -71,79 +71,88 @@ func _on_Enemy_karma():
 func _on_Enemy2_karma():
 	print("add health")
 	health += karma * 2
-	scale.x = scale.x * 1.1
-	scale.y = scale.y * 1.1
-	scale.z = scale.z * 1.1
+	scale.x = scale.x * 1.2
+	scale.y = scale.y * 1.2
+	scale.z = scale.z * 1.2
 	pass # Replace with function body.
 
 
 func _on_Enemy6_karma():
 	print("add health")
 	health += karma * 2
-	scale.x = scale.x * 1.1
-	scale.y = scale.y * 1.1
-	scale.z = scale.z * 1.1
+	scale.x = scale.x * 1.2
+	scale.y = scale.y * 1.2
+	scale.z = scale.z * 1.2
 	pass # Replace with function body.
 
 
 func _on_Enemy5_karma():
 	print("add health")
 	health += karma * 2
-	scale.x = scale.x * 1.1
-	scale.y = scale.y * 1.1
-	scale.z = scale.z * 1.1
+	scale.x = scale.x * 1.2
+	scale.y = scale.y * 1.2
+	scale.z = scale.z * 1.2
 	pass # Replace with function body.
 
 
 func _on_Enemy7_karma():
 	print("add health")
 	health += karma * 2
-	scale.x = scale.x * 1.1
-	scale.y = scale.y * 1.1
-	scale.z = scale.z * 1.1
+	scale.x = scale.x * 1.2
+	scale.y = scale.y * 1.2
+	scale.z = scale.z * 1.2
 	pass # Replace with function body.
 
 
 func _on_Enemy8_karma():
 	print("add health")
 	health += karma * 2
-	scale.x = scale.x * 1.1
-	scale.y = scale.y * 1.1
-	scale.z = scale.z * 1.1
+	scale.x = scale.x * 1.2
+	scale.y = scale.y * 1.2
+	scale.z = scale.z * 1.2
 	pass # Replace with function body.
 
 
 func _on_Enemy9_karma():
 	print("add health")
 	health += karma * 2
-	scale.x = scale.x * 1.1
-	scale.y = scale.y * 1.1
-	scale.z = scale.z * 1.1
+	scale.x = scale.x * 1.2
+	scale.y = scale.y * 1.2
+	scale.z = scale.z * 1.2
 	pass # Replace with function body.
 
 
 func _on_Enemy3_karma():
 	print("add health")
 	health += karma * 2
-	scale.x = scale.x * 1.1
-	scale.y = scale.y * 1.1
-	scale.z = scale.z * 1.1
+	scale.x = scale.x * 1.2
+	scale.y = scale.y * 1.2
+	scale.z = scale.z * 1.2
 	pass # Replace with function body.
 
 
 func _on_Enemy4_karma():
 	print("add health")
 	health += karma * 2
-	scale.x = scale.x * 1.1
-	scale.y = scale.y * 1.1
-	scale.z = scale.z * 1.1
+	scale.x = scale.x * 1.2
+	scale.y = scale.y * 1.2
+	scale.z = scale.z * 1.2
 	pass # Replace with function body.
 
 
 func _on_Enemy11_karma():
 	print("add health")
 	health += karma * 2
-	scale.x = scale.x * 1.1
-	scale.y = scale.y * 1.1
-	scale.z = scale.z * 1.1
+	scale.x = scale.x * 1.2
+	scale.y = scale.y * 1.2
+	scale.z = scale.z * 1.2
+	pass # Replace with function body.
+
+
+func _on_Enemy10_karma():
+	print("add health")
+	health += karma * 2
+	scale.x = scale.x * 1.2
+	scale.y = scale.y * 1.2
+	scale.z = scale.z * 1.2
 	pass # Replace with function body.

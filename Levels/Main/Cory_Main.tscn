@@ -173,5 +173,7 @@ transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 52.9488, 0.657351, -20.7
 [connection signal="karma" from="Enemy3" to="Boss" method="_on_Enemy3_karma"]
 [connection signal="karma" from="Enemy4" to="Player" method="_on_Enemy4_karma"]
 [connection signal="karma" from="Enemy4" to="Boss" method="_on_Enemy4_karma"]
+[connection signal="karma" from="Enemy10" to="Player" method="_on_Enemy10_karma"]
+[connection signal="karma" from="Enemy10" to="Boss" method="_on_Enemy10_karma"]
 [connection signal="karma" from="Enemy11" to="Player" method="_on_Enemy11_karma"]
 [connection signal="karma" from="Enemy11" to="Boss" method="_on_Enemy11_karma"]

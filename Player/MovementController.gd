@@ -171,3 +171,8 @@ func _on_Enemy11_karma():
 func _on_BulletCollision_area_entered(area):
 	$Head/Camera/HUD.update_health()
 	pass # Replace with function body.
+
+
+func _on_Enemy10_karma():
+	$Head/Camera/HUD.update_score(1)
+	pass # Replace with function body.

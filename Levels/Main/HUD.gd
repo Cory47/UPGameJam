@@ -50,6 +50,9 @@ func update_health():
 	health -= 10
 	$HealthBar.value = health
 	$HealthLabel.text = str(health)
+	
+	if health <= 0:
+		get_tree().change_scene("res://Levels/Main/Lose.tscn")
 
 
 
