@@ -16,5 +16,5 @@ func idle_behavior(delta):
 	
 func aggro_behavior(delta):
 	$ShotTimer.stop()
-	velocity = -transform.basis.z * 10
+	velocity = -transform.basis.z * 2
 	look_at(transform.origin + velocity.normalized(), Vector3.UP)

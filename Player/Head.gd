@@ -87,7 +87,7 @@ func _physics_process(delta):
 	if (time > 0.5):
 		fire_enabled = true
 	if Input.is_action_pressed("ui_shoot"):
-		if $Camera/RayCast.get_collider() and $Camera/RayCast.get_collider().get_class() == "StaticBody" and $Camera/RayCast.get_collider().get_name() == "WallStaticBody":
+		if $Camera/RayCast.get_collider() and $Camera/RayCast.get_collider().get_class() == "StaticBody" and $Camera/RayCast.get_collider().get_name() == "WallStaticBody" and not $Camera/RayCast.get_collider().is_in_group("Wall"):
 				held_object =  $Camera/RayCast.get_collider()
 				held_object.collision_mask = 0
 				held_object.free()

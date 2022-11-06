@@ -26,6 +26,7 @@ config/icon="res://icon.png"
 
 [display]
 
+window/size/fullscreen=Transform( 4.02911, 0, 0, 0, 3.65926, 0, 0, 0, 0.282805, 73.17, 0, -16.947 )
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
 
