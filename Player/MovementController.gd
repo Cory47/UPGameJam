@@ -108,6 +108,7 @@ func _on_Area_area_entered(area):
 	$Head.ammo += 10
 	$Head/Camera/HUD.update_ammo(10)
 	print(speed_mod)
+	$PickupSound.play()
 	pass # Replace with function body.
 
 func _on_LavaArea_area_entered(area):
