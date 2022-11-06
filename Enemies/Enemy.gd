@@ -32,7 +32,6 @@ func _process(delta):
 	if health < 0:
 		die()
 
-#placeholders for base class right now
 func idle_behavior():
 	pass
 	
