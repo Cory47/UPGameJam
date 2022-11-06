@@ -1,12 +1,10 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Levels/Main/L_Main.gd" type="Script" id=1]
 [ext_resource path="res://Levels/Main/Environment.tres" type="Environment" id=2]
 [ext_resource path="res://Levels/Main/Geometry/Floor.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Levels/Main/Geometry/Cube.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Levels/Main/Geometry/Wall.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Enemies/Boss.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Levels/Main/Geometry/Platform.tscn" type="PackedScene" id=8]
 
 [sub_resource type="BoxShape" id=1]
@@ -15,9 +13,6 @@
 
 [node name="BossTest" type="Spatial"]
 script = ExtResource( 1 )
-
-[node name="Player" parent="." instance=ExtResource( 4 )]
-transform = Transform( 0.998892, -0.000144901, 0.0470625, 0.000190832, 1, -0.000971475, -0.0470624, 0.00097938, 0.998891, -4.65422, 6, 17.2756 )
 
 [node name="ArenaGeometry" type="Spatial" parent="."]
 
@@ -75,9 +70,6 @@ skeleton = NodePath("../Floor1")
 transform = Transform( 2.85144, 0, 0, 0, 0.664201, 0, 0, 0, 2.85144, 0, 0.845546, 0 )
 
 [node name="WinArea" type="Area" parent="ArenaGeometry/Win"]
-
-collision_layer = 32
-collision_mask = 32
 
 
 [node name="CollisionShape" type="CollisionShape" parent="ArenaGeometry/Win/WinArea"]
@@ -184,9 +176,3 @@ transform = Transform( -0.866026, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75,
 shadow_enabled = true
 shadow_bias = 0.05
 directional_shadow_max_distance = 250.0
-
-[node name="Boss" parent="." instance=ExtResource( 7 )]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 3.44518, -0.145297 )
-
-[connection signal="area_entered" from="ArenaGeometry/Floor1/LavaArea" to="Player" method="_on_LavaArea_area_entered"]
-[connection signal="area_entered" from="ArenaGeometry/Win/WinArea" to="Player" method="_on_WinArea_area_entered"]
