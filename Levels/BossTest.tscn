@@ -71,7 +71,6 @@ transform = Transform( 2.85144, 0, 0, 0, 0.664201, 0, 0, 0, 2.85144, 0, 0.845546
 
 [node name="WinArea" type="Area" parent="ArenaGeometry/Win"]
 
-
 [node name="CollisionShape" type="CollisionShape" parent="ArenaGeometry/Win/WinArea"]
 transform = Transform( 1.04929, 0, 0, 0, 1.09083, 0, 0, 0, 1.05396, 0, 0, 0 )
 shape = SubResource( 2 )
@@ -170,9 +169,3 @@ skeleton = NodePath("../Floor1")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Lighting"]
 environment = ExtResource( 2 )
-
-[node name="DirectionalLight" type="DirectionalLight" parent="Lighting"]
-transform = Transform( -0.866026, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 5, 0 )
-shadow_enabled = true
-shadow_bias = 0.05
-directional_shadow_max_distance = 250.0
