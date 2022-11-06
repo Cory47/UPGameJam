@@ -4,7 +4,8 @@
 [ext_resource path="res://Enemies/Enemy.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Player/Ammo.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Enemies/Boss.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Player/MovementController.gd" type="Script" id=5]
+[ext_resource path="res://Enemies/EnemyChase.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Player/MovementController.gd" type="Script" id=6]
 
 [node name="EnemyTest" instance=ExtResource( 1 )]
 
@@ -22,5 +23,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.56089, 3.18213, 7.92223 )
 
 [node name="Ammo" parent="." index="6" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.41862, 1.32213, 0.418875 )
+
+[node name="EnemyChase" parent="." index="7" instance=ExtResource( 5 )]
+transform = Transform( -0.0467848, 0, -0.497806, 0, 0.5, 0, 0.497806, 0, -0.0467848, -16.0653, 0.954534, 0 )
 
 [connection signal="karma" from="Enemy" to="Player" method="_on_Enemy_karma"]

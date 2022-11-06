@@ -23,20 +23,19 @@ func _process(delta):
 	
 	#standy/aggro behavior
 	if(aggro == false):
-		idle_behavior()
+		idle_behavior(delta)
 	else:
-		aggro_behavior()
+		aggro_behavior(delta)
 		
 	
 		
 	if health < 0:
 		die()
 
-#placeholders for base class right now
-func idle_behavior():
+func idle_behavior(delta):
 	pass
 	
-func aggro_behavior():
+func aggro_behavior(delta):
 	pass
 	
 func die():
