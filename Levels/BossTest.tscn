@@ -15,40 +15,61 @@
 script = ExtResource( 1 )
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
-transform = Transform( -0.999757, 0.000212208, 0.0220507, 0.000190832, 1, -0.000971475, -0.0220509, -0.000967031, -0.999756, 0, 6, -19 )
+transform = Transform( 0.998892, -0.000144901, 0.0470625, 0.000190832, 1, -0.000971475, -0.0470624, 0.00097938, 0.998891, -4.65422, 6, 17.2756 )
 
 [node name="ArenaGeometry" type="Spatial" parent="."]
 
 [node name="Floor1" parent="ArenaGeometry" instance=ExtResource( 3 )]
 
-[node name="Lava" parent="ArenaGeometry" instance=ExtResource( 3 )]
-transform = Transform( 0.510223, 0, 0, 0, 0.727954, 0, 0, 0, 0.510223, 0, 0.475463, 0 )
-
-[node name="LavaArea" type="Area" parent="ArenaGeometry/Lava"]
-transform = Transform( 19.646, 0, 0, 0, 0.331709, 0, 0, 0, 19.646, 0, -0.0399298, 0 )
+[node name="LavaArea" type="Area" parent="ArenaGeometry/Floor1"]
+transform = Transform( 19.8756, 0, 0, 0, 0.241032, 0, 0, 0, 19.8756, 0, 0.446396, 0 )
 collision_layer = 16
 collision_mask = 16
 
-[node name="CollisionShape" type="CollisionShape" parent="ArenaGeometry/Lava/LavaArea"]
+[node name="CollisionShape" type="CollisionShape" parent="ArenaGeometry/Floor1/LavaArea"]
 shape = SubResource( 1 )
 
 [node name="Stone1" parent="ArenaGeometry" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.36287, 0, -8.12132 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.0548, 0.0135069, -7.62856 )
 skeleton = NodePath("../Floor1")
 
 [node name="Stone2" parent="ArenaGeometry" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.673058, 0.00352669, -5.23587 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.22776, 0.00352669, -10.1726 )
 skeleton = NodePath("../Floor1")
 
 [node name="Stone3" parent="ArenaGeometry" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.00641, 0.00352669, -2.89541 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.82802, 0.00352669, -1.02274 )
 skeleton = NodePath("../Floor1")
 
 [node name="Stone4" parent="ArenaGeometry" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.98624, 0.00352669, -7.3621 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.289811, 0.00352669, -8.20811 )
 skeleton = NodePath("../Floor1")
 
-[node name="Platform" parent="ArenaGeometry" instance=ExtResource( 8 )]
+[node name="Stone5" parent="ArenaGeometry" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.87716, 0.00352669, 5.87781 )
+skeleton = NodePath("../Floor1")
+
+[node name="Stone6" parent="ArenaGeometry" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.84031, 0.0135069, 17.1689 )
+skeleton = NodePath("../Floor1")
+
+[node name="Stone7" parent="ArenaGeometry" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.70054, 0.00352669, 15.9303 )
+skeleton = NodePath("../Floor1")
+
+[node name="Stone8" parent="ArenaGeometry" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.63357, 0.00352669, 5.29951 )
+skeleton = NodePath("../Floor1")
+
+[node name="Stone9" parent="ArenaGeometry" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6753, 0.00352669, 9.01407 )
+skeleton = NodePath("../Floor1")
+
+[node name="Stone10" parent="ArenaGeometry" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.00941, 0.00352669, -0.439131 )
+skeleton = NodePath("../Floor1")
+
+[node name="Win" parent="ArenaGeometry" instance=ExtResource( 8 )]
 transform = Transform( 2.85144, 0, 0, 0, 0.664201, 0, 0, 0, 2.85144, 0, 0.845546, 0 )
 
 [node name="Wall1" parent="ArenaGeometry" instance=ExtResource( 6 )]
@@ -129,6 +150,18 @@ transform = Transform( -3.5, -0.216506, -3.01992e-07, -6.06218, 0.125, -1.51421e
 [node name="TooSteep2" parent="ArenaGeometry" instance=ExtResource( 5 )]
 transform = Transform( 3.5, 0.216506, 0, -6.06218, 0.125, 0, 0, 0, 2, -16.5, 5.5, 8.5 )
 
+[node name="Stone11" parent="ArenaGeometry" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.7805, 0.00352669, -13.5896 )
+skeleton = NodePath("../Floor1")
+
+[node name="Stone12" parent="ArenaGeometry" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.6133, 0.00352669, -13.9477 )
+skeleton = NodePath("../Floor1")
+
+[node name="Stone13" parent="ArenaGeometry" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.6133, 0.00352669, -13.9477 )
+skeleton = NodePath("../Floor1")
+
 [node name="Lighting" type="Node" parent="."]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Lighting"]
@@ -143,4 +176,4 @@ directional_shadow_max_distance = 250.0
 [node name="Boss" parent="." instance=ExtResource( 7 )]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 3.44518, -0.145297 )
 
-[connection signal="area_entered" from="ArenaGeometry/Lava/LavaArea" to="Player" method="_on_LavaArea_area_entered"]
+[connection signal="area_entered" from="ArenaGeometry/Floor1/LavaArea" to="Player" method="_on_LavaArea_area_entered"]
