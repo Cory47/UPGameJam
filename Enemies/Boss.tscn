@@ -10,4 +10,4 @@ script = ExtResource( 1 )
 animation = "boss"
 
 [node name="ShotPosition" parent="." index="3"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.12106 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.59927 )

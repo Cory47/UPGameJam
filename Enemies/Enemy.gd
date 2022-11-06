@@ -72,11 +72,7 @@ func _on_ShotTimer_timeout():
 	print("enemy shooting")
 	var bullet = BulletScene.instance()
 	owner.add_child(bullet)
-	#var dest = get_player_pos()
-	#print(dest)
-	#bullet.setDest(dest)
 	bullet.transform = $ShotPosition.global_transform
 	bullet.velocity = -bullet.transform.basis.z * bullet.muzzle_velocity
 	bullet.scale = Vector3(0.25, 0.25, 0.25)
-	#bullet.translation = move_toward()
 
