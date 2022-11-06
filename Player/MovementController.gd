@@ -24,7 +24,7 @@ onready var gravity = (ProjectSettings.get_setting("physics/3d/default_gravity")
 var karma = 0
 var speed_mod = 1
 var invincible = false
-
+var boss = false
 signal died
 
 
@@ -188,10 +188,10 @@ func _on_Enemy10_karma():
 
 func _on_BossRoom_area_entered(area):
 	self.global_transform.origin = Vector3(0,20,0)
-	$Head/AudioStreamPlayer.stop()
-	var audioStream: AudioStream = preload("res://Sounds/slappyboss.mp3")
-	$Head/AudioStreamPlayer.set_stream(audioStream)
-	$Head/AudioStreamPlayer.play()
+	if $Head/Main_Sound.is_playing() == true:
+		$Head/Main_Sound.stop()
+	if $Head/Boss_Sound.is_playing() == false:
+		$Head/Boss_Sound.play()
 
 
 func _on_Invincibility_timeout():
