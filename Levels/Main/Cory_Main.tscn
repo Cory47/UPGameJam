@@ -35,7 +35,7 @@ script = ExtResource( 6 )
 [node name="Player" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 73.448, 1.99398, 19.8667 )
 
-[node name="Level3" parent="." instance=ExtResource( 2 )]
+[node name="Level3" parent="." groups=["Wall"] instance=ExtResource( 2 )]
 transform = Transform( 50, 0, 0, 0, 50, 0, 0, 0, 50, -0.0361633, -3.46901, 0.277753 )
 
 [node name="StaticBody" type="StaticBody" parent="Level3"]
@@ -100,16 +100,7 @@ omni_attenuation = 1.62451
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 36.323, 0.357078, -2.65834 )
 
 [node name="Boss" parent="." groups=["Enemy"] instance=ExtResource( 8 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 53.8519, 0.250003, 1.29721 )
-
-[node name="Enemy2" parent="." groups=["Enemy"] instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 73.2332, 0, 3.21237 )
-
-[node name="Enemy4" parent="." groups=["Enemy"] instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 73.2332, 0, -9.87604 )
-
-[node name="Enemy3" parent="." groups=["Enemy"] instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 49.1352, 0, 0.664841 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 53.8519, 1.05636, 1.29721 )
 
 [node name="Cube" parent="." instance=ExtResource( 10 )]
 transform = Transform( 0.25, 0, 0, 0, 2.988, 0, 0, 0, 4.68, 69.3213, 1.15817, 21.027 )
@@ -129,6 +120,58 @@ transform = Transform( 4.02911, 0, 0, 0, 3.65926, 0, 0, 0, 0.282805, 73.17, 0, -
 [node name="Cube5" parent="." instance=ExtResource( 10 )]
 transform = Transform( 4.02911, 0, 0, 0, 3.65926, 0, 0, 0, 0.282805, 73.17, 0, -16.947 )
 
+[node name="Enemy" parent="." groups=["Enemy"] instance=ExtResource( 4 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 32.6209, 0.949031, 19.3806 )
+
+[node name="Enemy6" parent="." groups=["Enemy"] instance=ExtResource( 4 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 48.4588, 0.99091, 17.4377 )
+
+[node name="Enemy5" parent="." groups=["Enemy"] instance=ExtResource( 4 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 57.2537, 0.276054, 21.6455 )
+
+[node name="Enemy7" parent="." groups=["Enemy"] instance=ExtResource( 4 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 64.7529, 0.685894, 21.8314 )
+
+[node name="Enemy8" parent="." groups=["Enemy"] instance=ExtResource( 4 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 65.3821, 0.495062, 12.4831 )
+
+[node name="Enemy9" parent="." groups=["Enemy"] instance=ExtResource( 4 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 40.758, 0.676225, 11.5227 )
+
+[node name="Enemy2" parent="." groups=["Enemy"] instance=ExtResource( 4 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 31.6057, 0.229927, -21.4623 )
+
+[node name="Enemy3" parent="." groups=["Enemy"] instance=ExtResource( 4 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 73.0115, 0.248894, 2.02662 )
+
+[node name="Ammo2" parent="." instance=ExtResource( 7 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 73.4737, -0.456345, -8.26114 )
+
+[node name="Enemy4" parent="." groups=["Enemy"] instance=ExtResource( 4 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 64.5371, 0.48594, -6.16831 )
+
+[node name="Enemy10" parent="." groups=["Enemy"] instance=ExtResource( 4 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 41.2701, 1.34823, -13.2869 )
+
+[node name="Enemy11" parent="." groups=["Enemy"] instance=ExtResource( 4 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 52.9488, 0.657351, -20.7342 )
+
+[connection signal="karma" from="Enemy" to="Player" method="_on_Enemy_karma"]
+[connection signal="karma" from="Enemy" to="Boss" method="_on_Enemy_karma"]
+[connection signal="karma" from="Enemy6" to="Player" method="_on_Enemy6_karma"]
+[connection signal="karma" from="Enemy6" to="Boss" method="_on_Enemy6_karma"]
+[connection signal="karma" from="Enemy5" to="Player" method="_on_Enemy5_karma"]
+[connection signal="karma" from="Enemy5" to="Boss" method="_on_Enemy5_karma"]
+[connection signal="karma" from="Enemy7" to="Player" method="_on_Enemy7_karma"]
+[connection signal="karma" from="Enemy7" to="Boss" method="_on_Enemy7_karma"]
+[connection signal="karma" from="Enemy8" to="Player" method="_on_Enemy8_karma"]
+[connection signal="karma" from="Enemy8" to="Boss" method="_on_Enemy8_karma"]
+[connection signal="karma" from="Enemy9" to="Player" method="_on_Enemy9_karma"]
+[connection signal="karma" from="Enemy9" to="Boss" method="_on_Enemy9_karma"]
 [connection signal="karma" from="Enemy2" to="Player" method="_on_Enemy2_karma"]
-[connection signal="karma" from="Enemy4" to="Player" method="_on_Enemy2_karma"]
-[connection signal="karma" from="Enemy3" to="Player" method="_on_Enemy2_karma"]
+[connection signal="karma" from="Enemy3" to="Player" method="_on_Enemy3_karma"]
+[connection signal="karma" from="Enemy3" to="Boss" method="_on_Enemy3_karma"]
+[connection signal="karma" from="Enemy4" to="Player" method="_on_Enemy4_karma"]
+[connection signal="karma" from="Enemy4" to="Boss" method="_on_Enemy4_karma"]
+[connection signal="karma" from="Enemy11" to="Player" method="_on_Enemy11_karma"]
+[connection signal="karma" from="Enemy11" to="Boss" method="_on_Enemy11_karma"]
