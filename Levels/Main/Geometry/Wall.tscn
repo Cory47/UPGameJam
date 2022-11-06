@@ -12,7 +12,7 @@ extents = Vector3( 20, 6, 0.5 )
 [node name="Wall" type="MeshInstance"]
 mesh = SubResource( 2 )
 
-[node name="WallStaticBody" type="StaticBody" parent="."]
+[node name="StaticBody" type="StaticBody" parent="."]
 
-[node name="CollisionShape" type="CollisionShape" parent="WallStaticBody"]
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
 shape = SubResource( 4 )

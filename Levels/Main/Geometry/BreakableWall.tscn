@@ -10,12 +10,12 @@
 [node name="Cube" type="MeshInstance"]
 script = ExtResource( 2 )
 
-[node name="LevelStaticBody" type="StaticBody" parent="."]
+[node name="WallStaticBody" type="StaticBody" parent="."]
 
-[node name="CollisionShape" type="CollisionShape" parent="LevelStaticBody"]
+[node name="CollisionShape" type="CollisionShape" parent="WallStaticBody"]
 shape = SubResource( 2 )
 
-[node name="MeshInstance" type="MeshInstance" parent="LevelStaticBody"]
+[node name="MeshInstance" type="MeshInstance" parent="WallStaticBody"]
 mesh = SubResource( 1 )
 material/0 = ExtResource( 1 )
 __meta__ = {
