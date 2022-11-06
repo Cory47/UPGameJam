@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Levels/Main/HUD.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/CutiePatootie-Rgjv.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Levels/Main/HealthBar.gd" type="Script" id=3]
+[ext_resource path="res://Art/crosshair.png" type="Texture" id=4]
 
 [sub_resource type="Theme" id=2]
 
@@ -52,5 +53,9 @@ margin_top = 563.0
 margin_right = 186.0
 margin_bottom = 581.0
 script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 4 )
+offset = Vector2( 512, 300 )
 
 [connection signal="value_changed" from="HealthBar" to="." method="_on_HealthBar_value_changed"]
