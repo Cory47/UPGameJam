@@ -21,6 +21,11 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+
+func _on_play_again_pressed():
+	get_tree()
+	pass # Replace with function body.
 "
 
 [node name="Control" type="Control"]
@@ -55,4 +60,4 @@ text = "Try Again?"
 flat = true
 script = ExtResource( 2 )
 
-[connection signal="pressed" from="play_again" to="play_again" method="_on_play_again_pressed"]
+[connection signal="pressed" from="play_again" to="." method="_on_play_again_pressed"]
