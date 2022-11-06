@@ -1,8 +1,19 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=7 format=2]
+=======
+[gd_scene load_steps=11 format=2]
+>>>>>>> Stashed changes
 
 [ext_resource path="res://Enemies/Enemy.gd" type="Script" id=1]
 [ext_resource path="res://Art/enemy1-1.png" type="Texture" id=2]
 [ext_resource path="res://Art/enemy1-2.png" type="Texture" id=3]
+<<<<<<< Updated upstream
+=======
+[ext_resource path="res://Art/enemy2-1.png" type="Texture" id=5]
+[ext_resource path="res://Art/enemy2-2.png" type="Texture" id=6]
+[ext_resource path="res://Art/Boss_idle-1.png" type="Texture" id=7]
+[ext_resource path="res://Art/Boss_idle-2.png" type="Texture" id=8]
+>>>>>>> Stashed changes
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
