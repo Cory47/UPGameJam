@@ -7,7 +7,7 @@
 [ext_resource path="res://Levels/Main/Geometry/Wall.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Levels/Main/Geometry/Cube.tscn" type="PackedScene" id=6]
 
-[node name="L_Main" type="Spatial"]
+[node name="L_Main2" type="Spatial"]
 script = ExtResource( 4 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]

@@ -108,7 +108,7 @@ cast_to = Vector3( 0, 0, -100 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.347, -0.274, -1.20877 )
 
 [node name="CSGMesh" type="CSGMesh" parent="Camera/Hand"]
-transform = Transform( 0.954652, 0, 0.297725, 0.0741821, 0.968462, -0.237864, -0.288335, 0.249163, 0.924543, 0.347, -0.18, 1 )
+transform = Transform( 0.954652, 0, 0.297725, 0.0741821, 0.968462, -0.237864, -0.288335, 0.249163, 0.924543, 0.247443, -0.179597, 0.258217 )
 mesh = SubResource( 7 )
 material = SubResource( 8 )
 

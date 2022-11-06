@@ -1,6 +1,6 @@
 extends StaticBody
 
-var health = 100
+var health = 20
 var aggro = false
 
 signal karma
