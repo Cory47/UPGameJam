@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://fonts/Cookiemonster-gv11.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Button.gd" type="Script" id=2]
+[ext_resource path="res://Levels/Main/Start.gd" type="Script" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 100
@@ -14,6 +15,7 @@ default_font = SubResource( 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 rect_pivot_offset = Vector2( -447, 937 )
+script = ExtResource( 3 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_right = 1.0

@@ -109,7 +109,6 @@ func _on_Area_area_entered(area):
 
 
 
-
 func _on_Head_change_speed():
 	speed_mod = speed_mod * 1.33
 	pass # Replace with function body.
@@ -123,3 +122,10 @@ func _on_Enemy2_karma():
 func _on_Enemy_karma():
 	$Head/Camera/HUD.update_score(1)
 	pass # Replace with function body.
+
+
+
+
+
+func _on_LavaArea_area_entered(area):
+	get_tree().change_scene("res://Levels/Main/Lose.tscn")

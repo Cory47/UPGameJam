@@ -9,12 +9,18 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Area",
+"class": "Lava",
+"language": "GDScript",
+"path": "res://Levels/Lava.gd"
+}, {
 "base": "KinematicBody",
 "class": "MovementController",
 "language": "GDScript",
 "path": "res://Player/MovementController.gd"
 } ]
 _global_script_class_icons={
+"Lava": "",
 "MovementController": ""
 }
 
