@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://fonts/Cookiemonster-gv11.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Button.gd" type="Script" id=2]
+[ext_resource path="res://Art/startscreen.png" type="Texture" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 100
@@ -19,6 +20,11 @@ rect_pivot_offset = Vector2( -447, 937 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 1, 0.654902, 0.945098, 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 512, 301 )
+scale = Vector2( 0.545833, 0.572222 )
+texture = ExtResource( 3 )
 
 [node name="Button" type="Button" parent="."]
 anchor_left = 0.5
