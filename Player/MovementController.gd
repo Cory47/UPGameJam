@@ -115,6 +115,7 @@ func _on_LavaArea_area_entered(area):
 	get_tree().change_scene("res://Levels/Main/Lose.tscn")
 
 func _on_WinArea_area_entered(area):
+	$Head/Boss_Sound.stop()
 	get_tree().change_scene("res://Levels/Main/winScreen.tscn")
 	
 func _on_Head_change_speed():
@@ -190,7 +191,10 @@ func _on_BossRoom_area_entered(area):
 	$Head/Camera/HUD.update_bosstext()
 	$Head/Camera/HUD/BossText.show()
 	self.global_transform.origin = Vector3(0,20,0)
-	pass # Replace with function body.
+	if $Head/Main_Sound.is_playing() == true:
+		$Head/Main_Sound.stop()
+	if $Head/Boss_Sound.is_playing() == false:
+		$Head/Boss_Sound.play()
 
 
 func _on_Invincibility_timeout():
