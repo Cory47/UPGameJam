@@ -43,7 +43,7 @@ collision_mask = 16
 shape = SubResource( 2 )
 
 [node name="BossRoom" type="Area" parent="." index="6"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0154116, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0216249, 0 )
 collision_layer = 256
 collision_mask = 256
 

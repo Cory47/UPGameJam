@@ -8,7 +8,7 @@
 [sub_resource type="CylinderShape" id=1]
 
 [sub_resource type="BoxShape" id=2]
-extents = Vector3( 29.7588, 1, 19.1191 )
+extents = Vector3( 24.5729, 1, 19.1191 )
 
 [node name="L_Main2" type="Spatial"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.85896, 0, 0 )
@@ -116,9 +116,11 @@ shape = SubResource( 1 )
 
 [node name="Area" type="Area" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -62.9453, 0, 0 )
+collision_layer = 256
+collision_mask = 256
 
 [node name="CollisionShape" type="CollisionShape" parent="Area"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 42.073, 2.86013, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 42.073, 2.92624, 0 )
 shape = SubResource( 2 )
 
 [connection signal="area_entered" from="WinArea" to="." method="_on_WinArea_area_entered"]
